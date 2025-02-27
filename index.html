@@ -3,53 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursos para GameServer</title>
+    <title>Árbol de Archivos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        ul { list-style-type: none; padding-left: 20px; }
-        li { margin: 5px 0; cursor: pointer; }
-        li::before {
-            content: "📁 ";
-            margin-right: 5px;
+        body {
+            margin: 20px;
         }
-        li ul li::before {
-            content: "📄 ";
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
         }
-        li:hover {
-            background-color: #f0f0f0;
+        li {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
-    <h1>Recursos para GameServer</h1>
-    <div id="file-tree"></div>
+    <div class="container">
+        <h1 class="my-4">Árbol de Archivos</h1>
+        <div id="file-tree" class="border p-3"></div>
+    </div>
 
     <script>
-        async function fetchFileTree() {
-            const response = await fetch('file-tree.json');
-            const fileTree = await response.json();
-            return fileTree;
-        }
+        fetch('file-tree.json')
+            .then(response => response.json())
+            .then(data => {
+                const fileTreeContainer = document.getElementById('file-tree');
+                fileTreeContainer.appendChild(createFileTree(data));
+            });
 
-        function createTreeElement(node) {
+        function createFileTree(tree) {
             const ul = document.createElement('ul');
-            for (const key in node) {
+            for (const key in tree) {
                 const li = document.createElement('li');
                 li.textContent = key;
-                if (typeof node[key] === 'object') {
-                    li.appendChild(createTreeElement(node[key]));
+                if (tree[key]) {
+                    li.appendChild(createFileTree(tree[key]));
                 }
                 ul.appendChild(li);
             }
             return ul;
         }
-
-        async function renderFileTree() {
-            const fileTree = await fetchFileTree();
-            const treeElement = createTreeElement(fileTree);
-            document.getElementById('file-tree').appendChild(treeElement);
-        }
-
-        renderFileTree();
     </script>
 </body>
 </html>
