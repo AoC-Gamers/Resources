@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos para GameServer</title>
+    <style>
+        ul { list-style-type: none; }
+        li { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>Recursos para GameServer</h1>
+    <div id="file-tree"></div>
+
+    <script>
+        async function fetchFileTree() {
+            const response = await fetch('file-tree.json');
+            const fileTree = await response.json();
+            return fileTree;
+        }
+
+        function createTreeElement(node) {
+            const ul = document.createElement('ul');
+            for (const key in node) {
+                const li = document.createElement('li');
+                li.textContent = key;
+                if (typeof node[key] === 'object') {
+                    li.appendChild(createTreeElement(node[key]));
+                }
+                ul.appendChild(li);
+            }
+            return ul;
+        }
+
+        async function renderFileTree() {
+            const fileTree = await fetchFileTree();
+            const treeElement = createTreeElement(fileTree);
+            document.getElementById('file-tree').appendChild(treeElement);
+        }
+
+        renderFileTree();
+    </script>
+</body>
+</html>
