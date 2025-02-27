@@ -1,0 +1,11 @@
+{
+  "name": "file-tree-generator",
+  "version": "1.0.0",
+  "description": "Genera un árbol de archivos para el índice.",
+  "main": "generateFileTree.js",
+  "scripts": {
+    "generate": "node generateFileTree.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
