@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursos para GameServer</title>
     <style>
-        ul { list-style-type: none; }
-        li { margin: 5px 0; }
+        ul { list-style-type: none; padding-left: 20px; }
+        li { margin: 5px 0; cursor: pointer; }
+        li::before {
+            content: "📁 ";
+            margin-right: 5px;
+        }
+        li ul li::before {
+            content: "📄 ";
+        }
+        li:hover {
+            background-color: #f0f0f0;
+        }
     </style>
 </head>
 <body>
