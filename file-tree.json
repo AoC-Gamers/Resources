@@ -1,4 +1,5 @@
 {
+  ".htaccess": null,
   "aoc_servermessage": {
     "aoc_logo": {
       "host.png": null,
@@ -20,6 +21,8 @@
     },
     "motd.html": null
   },
+  "compressed-files.json": null,
+  "generateRedirects.js": null,
   "left4dead2": {
     "models": {
       "fortnite_emotes": {
@@ -161,5 +164,6 @@
         "youre_awesome_emote_music.mp3.bz2": null
       }
     }
-  }
+  },
+  "redirects.txt": null
 }

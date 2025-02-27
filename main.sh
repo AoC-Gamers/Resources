@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Generar el árbol de archivos
-npm run generate
+node generateFileTree.js
+
+# Generar el archivo de redirecciones
+node generateRedirects.js
 
 # Comprimir carpetas específicas
 ./compressFolders.sh
