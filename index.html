@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Árbol de Archivos</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             margin: 20px;
+            background-color: #121212;
+            color: #ffffff;
         }
         ul {
             list-style-type: none;
@@ -16,12 +19,39 @@
         li {
             margin: 5px 0;
         }
+        .folder > ul {
+            display: none;
+        }
+        .folder.open > ul {
+            display: block;
+        }
+        .folder > span {
+            cursor: pointer;
+        }
+        .border {
+            border-color: #444444 !important;
+        }
+        .container {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .icon {
+            margin-right: 8px;
+        }
+        .download-btn {
+            margin-left: 10px;
+            cursor: pointer;
+            color: #007bff;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 class="my-4">Árbol de Archivos</h1>
-        <div id="file-tree" class="border p-3"></div>
+        <div id="file-tree" class="border p-3 mb-4"></div>
+        <h2 class="my-4">Carpetas Comprimidas</h2>
+        <ul id="compressed-folders" class="border p-3"></ul>
     </div>
 
     <script>
@@ -32,17 +62,64 @@
                 fileTreeContainer.appendChild(createFileTree(data));
             });
 
-        function createFileTree(tree) {
+        function createFileTree(tree, parentPath = '') {
             const ul = document.createElement('ul');
             for (const key in tree) {
                 const li = document.createElement('li');
-                li.textContent = key;
+                const icon = document.createElement('span');
+                icon.classList.add('icon');
+                const filePath = parentPath ? `${parentPath}/${key}` : key;
                 if (tree[key]) {
-                    li.appendChild(createFileTree(tree[key]));
+                    li.classList.add('folder');
+                    icon.textContent = '📁';
+                    const span = document.createElement('span');
+                    span.textContent = key;
+                    span.onclick = () => li.classList.toggle('open');
+                    li.appendChild(icon);
+                    li.appendChild(span);
+                    li.appendChild(createFileTree(tree[key], filePath));
+                } else {
+                    icon.textContent = '📄';
+                    const fileLink = document.createElement('a');
+                    fileLink.href = filePath;
+                    fileLink.textContent = key;
+                    if (key.endsWith('.html') || key.match(/\.(jpg|jpeg|png|gif|bmp|svg)$/i)) {
+                        fileLink.target = '_blank';
+                    }
+                    li.appendChild(icon);
+                    li.appendChild(fileLink);
                 }
                 ul.appendChild(li);
             }
             return ul;
+        }
+
+        fetchCompressedFolders();
+
+        function fetchCompressedFolders() {
+            fetch('compressed-files.json')
+                .then(response => response.json())
+                .then(data => {
+                    const compressedFoldersContainer = document.getElementById('compressed-folders');
+                    data.forEach(file => {
+                        const li = document.createElement('li');
+                        const icon = document.createElement('span');
+                        icon.classList.add('icon');
+                        icon.textContent = '📦';
+                        const downloadLink = document.createElement('a');
+                        downloadLink.href = file;
+                        downloadLink.download = file;
+                        const downloadBtn = document.createElement('span');
+                        downloadBtn.textContent = 'Descargar';
+                        downloadBtn.classList.add('download-btn');
+                        downloadBtn.onclick = () => downloadLink.click();
+                        li.appendChild(icon);
+                        li.appendChild(document.createTextNode(file));
+                        li.appendChild(downloadBtn);
+                        li.appendChild(downloadLink);
+                        compressedFoldersContainer.appendChild(li);
+                    });
+                });
         }
     </script>
 </body>

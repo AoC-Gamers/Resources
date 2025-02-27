@@ -1,6 +1,25 @@
 {
-  "favicon.ico": null,
-  "index.html": null,
+  "aoc_servermessage": {
+    "aoc_logo": {
+      "host.png": null,
+      "logo_vania.jpg": null,
+      "logo_zykklo.jpg": null,
+      "motd.png": null,
+      "patas.png": null,
+      "patas2.png": null
+    },
+    "host.html": null,
+    "img": {
+      "aoc.png": null,
+      "banner.jpg": null,
+      "banner.png": null,
+      "banner_patas.jpg": null,
+      "bg_main.jpg": null,
+      "motd.back": null,
+      "motd.jpg": null
+    },
+    "motd.html": null
+  },
   "left4dead2": {
     "models": {
       "fortnite_emotes": {
@@ -142,9 +161,5 @@
         "youre_awesome_emote_music.mp3.bz2": null
       }
     }
-  },
-  "package-lock.json": null,
-  "package.json": null,
-  "README.md": null,
-  "updateFileTree.sh": null
+  }
 }

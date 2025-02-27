@@ -1,14 +1,17 @@
 # Generador de Árbol de Archivos
 
-Este proyecto genera un árbol de archivos en formato JSON para el índice de un repositorio.
+Este proyecto genera un árbol de archivos en formato JSON para el índice de un repositorio y comprime carpetas específicas.
 
-## Uso
+## Requisitos
 
-1. Asegúrate de tener [Node.js](https://nodejs.org/) instalado.
-2. Ejecuta el siguiente comando para generar el árbol de archivos:
+Asegúrate de tener [Node.js](https://nodejs.org/) instalado.
 
-    ```sh
-    npm run generate
-    ```
+## Scripts
 
-3. El archivo `file-tree.json` se generará en el directorio raíz.
+### `main.sh`
+
+Este script principal gestiona las operaciones de generación del árbol de archivos y compresión de carpetas.
+
+### `compressFolders.sh`
+
+Este script comprime las carpetas especificadas en archivos `.zip`. Las carpetas a comprimir se definen en el script.
