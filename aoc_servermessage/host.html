@@ -1,11 +1,22 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>HOST AoC</title>
-</head>
+  <meta charset="UTF-8">
+  <title>HOST AoC</title>
+  <script>
+    function cargarImagenAleatoria() {
+      var imagenes = [
+        "./img/host/host.png"
+      ];
 
-<body style="margin:0px;padding:0px;background:#000000;overflow-y: hidden;">
-    <img alt="HOST" src="./img/banner.png" style="width:100%;height:100%;">
-    <noframes></noframes><noscript></noscript>
+      var indiceAleatorio = Math.floor(Math.random() * imagenes.length);
+      document.getElementById("imagenHOST").src = imagenes[indiceAleatorio];
+    }
+  </script>
+</head>
+<body onload="cargarImagenAleatoria();" style="margin:0; padding:0; background:#000; overflow-y: hidden;">
+  <img id="imagenHOST" alt="HOST" style="width:100%; height:100%;">
+  <noframes></noframes>
+  <noscript></noscript>
 </body>
 </html>
