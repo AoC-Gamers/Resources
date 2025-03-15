@@ -4,7 +4,7 @@ title: "AoC Gamers Resources"
 description: "Recursos para la comunidad de AoC Gamers"
 
 # URL principal de tu sitio (dominio propio)
-url: "https://resources.aoc-gamers.com"
+url: "http://resources.aoc-gamers.com"
 
 # Si el sitio se sirve en la raíz, deja baseurl vacío. Si se sirve en un subdirectorio, indícalo aquí.
 baseurl: ""
