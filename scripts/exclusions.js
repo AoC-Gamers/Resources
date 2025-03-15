@@ -21,13 +21,9 @@ const exclusions = new Set([
     'package.json',
 
     // Scripts
-    'compressFolders.sh',
-    'file-tree.json',
-    'generateFileTree.js',
     'build.sh',
-    'compressed-files.json',
-    'generateRedirects.js',
-    'exclusions.js',
+    'scripts',
+    'filetree',
 
     // Others
     'index.html',
@@ -37,4 +33,3 @@ const exclusions = new Set([
   ]);
   
   module.exports = exclusions;
-  

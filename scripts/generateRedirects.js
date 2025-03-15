@@ -4,7 +4,7 @@ const exclusions = require('./exclusions');  // Importa el Set de exclusiones
 
 function generateRedirects(dir, basePath = '') {
   const files = fs.readdirSync(dir);
-  let redirects = '';
+  const redirects = [];
 
   files.forEach(file => {
     if (exclusions.has(file)) return;
@@ -13,10 +13,10 @@ function generateRedirects(dir, basePath = '') {
     const stat = fs.statSync(filePath);
 
     if (stat.isDirectory()) {
-      redirects += generateRedirects(filePath, path.join(basePath, file));
+      redirects.push(...generateRedirects(filePath, path.join(basePath, file)));
     } else {
       const route = path.join(basePath, file).replace(/\\/g, '/');
-      redirects += `/${route} /index.html 200\n`;
+      redirects.push({ route: `/${route}`, target: '/index.html', status: 200 });
     }
   });
 
@@ -24,5 +24,9 @@ function generateRedirects(dir, basePath = '') {
 }
 
 const redirects = generateRedirects('./');
-fs.writeFileSync('_redirects', redirects);
+const outputDir = path.join(__dirname, '../filetree');
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir);
+}
+fs.writeFileSync(path.join(outputDir, 'redirects.json'), JSON.stringify(redirects, null, 2));
 console.log('El archivo de redirecciones ha sido generado correctamente.');

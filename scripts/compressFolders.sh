@@ -2,7 +2,7 @@
 
 # Carpetas a comprimir
 folders_to_compress=(
-    "./left4dead2/"
+    "../left4dead2/"
 )
 
 # Comprimir cada carpeta

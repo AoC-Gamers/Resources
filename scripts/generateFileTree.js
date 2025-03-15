@@ -30,7 +30,11 @@ const fileTree = generateFileTree('./');
 if (Object.keys(fileTree).length === 0) {
   console.error('El árbol de archivos está vacío. Verifica las rutas de inclusión.');
 } else {
-  fs.writeFileSync('file-tree.json', JSON.stringify(fileTree, null, 2));
-  fs.writeFileSync('compressed-files.json', JSON.stringify(compressedFiles, null, 2));
+  const outputDir = path.join(__dirname, '../filetree');
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir);
+  }
+  fs.writeFileSync(path.join(outputDir, 'file-tree.json'), JSON.stringify(fileTree, null, 2));
+  fs.writeFileSync(path.join(outputDir, 'compressed-files.json'), JSON.stringify(compressedFiles, null, 2));
   console.log('El árbol de archivos ha sido generado correctamente.');
 }
