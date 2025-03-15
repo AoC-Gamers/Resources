@@ -13,7 +13,8 @@ const compressedFiles = [];
 function generateFileTree(dir, tree = {}) {
     const files = fs.readdirSync(dir);
     files.forEach(file => {
-        if (exclusions.includes(file)) return;
+        if (exclusions.includes(file))
+            return;
         if (file.endsWith('.zip')) {
             compressedFiles.push(file);
             return;
