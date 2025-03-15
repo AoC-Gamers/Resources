@@ -55,7 +55,7 @@
     </div>
 
     <script>
-        fetch('file-tree.json')
+        fetch('filetree/file-tree.json')
             .then(response => response.json())
             .then(data => {
                 const fileTreeContainer = document.getElementById('file-tree');
@@ -97,7 +97,7 @@
         fetchCompressedFolders();
 
         function fetchCompressedFolders() {
-            fetch('compressed-files.json')
+            fetch('filetree/compressed-files.json')
                 .then(response => response.json())
                 .then(data => {
                     const compressedFoldersContainer = document.getElementById('compressed-folders');

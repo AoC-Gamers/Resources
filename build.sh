@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Generar el árbol de archivos
-node generateFileTree.js
+# Ejecutar el script de compresión de carpetas
+./scripts/compressFolders.sh
 
-# Generar el archivo de redirecciones
-node generateRedirects.js
+# Ejecutar el script de generación del árbol de archivos
+node ./scripts/generateFileTree.js
 
-# Comprimir carpetas específicas
-./compressFolders.sh
+# Ejecutar el script de generación de redirecciones
+node ./scripts/generateRedirects.js
 
-echo "El árbol de archivos ha sido actualizado y las carpetas especificadas han sido comprimidas."
+echo "Build completado correctamente."

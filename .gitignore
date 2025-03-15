@@ -1,0 +1,14 @@
+# Archivos generados por Jekyll
+_site/
+.jekyll-cache/
+
+# Dependencias de Ruby
+Gemfile.lock
+
+# Archivos temporales o de respaldo
+*.swp
+*.swo
+*~
+
+# Otros archivos de configuración de editores (opcional)
+.vscode/
