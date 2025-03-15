@@ -1,24 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>MOTD AoC</title>
-  <script>
-    function cargarImagenAleatoria() {
-      var imagenes = [
-        "./img/motd/motd.png",
-        "./img/motd/motd.patas.jpg",
-        "./img/motd/motd.patas2.jpg"
-      ];
 
-      var indiceAleatorio = Math.floor(Math.random() * imagenes.length);
-      document.getElementById("imagenMOTD").src = imagenes[indiceAleatorio];
-    }
-  </script>
+<head>
+    <meta charset="UTF-8">
+    <title>MOTD AoC</title>
 </head>
-<body onload="cargarImagenAleatoria();" style="margin:0; padding:0; background:#000; overflow-y: hidden;">
-  <img id="imagenMOTD" alt="MOTD" style="width:100%; height:100%;">
-  <noframes></noframes>
-  <noscript></noscript>
+
+<body style="margin:0px;padding:0px;background:#000000;overflow-y: hidden;">
+    <img alt="MOTD" src="./img/motd/motd.patas2.jpg" style="width:100%;height:100%;">
 </body>
+
 </html>
