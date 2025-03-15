@@ -83,4 +83,4 @@ Este proyecto proporciona recursos para usuarios y servidores, facilitando la ge
    El proyecto se puede desplegar en GitHub Pages. Se recomienda ignorar en Git los archivos generados, por ejemplo, `_site/`, agregándolos a `.gitignore`.
 
 2. **Optimización de Scripts:**  
-   Los scripts `generateFileTree.js` y `generateRedirects.js` utilizan `exclusions.js` para definir archivos y directorios a excluir, asegurando una única fuente de verdad y facilitando el mantenimiento.
+   Los scripts `generateFileTree.js` y `generateRedirects.js` utilizan `exclusions.js` para definir archivos y directorios a excluir, asegurando una única fuente.
