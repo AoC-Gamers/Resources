@@ -1,28 +1,5 @@
 {
-  "aoc_servermessage": {
-    "host.html": null,
-    "img": {
-      "host": {
-        "host.png": null
-      },
-      "logo": {
-        "logo.patas.png": null,
-        "logo.vania.jpg": null,
-        "logo.zykklo.jpg": null,
-        "logo2.patas.png": null,
-        "logo3.patas.png": null
-      },
-      "motd": {
-        "motd.patas.jpg": null,
-        "motd.patas2.jpg": null,
-        "motd.png": null,
-        "motd_vip.patas.jpg": null
-      },
-      "motd.back": null
-    },
-    "motd.html": null,
-    "motd_vip.html": null
-  },
+  "build.sh": null,
   "CNAME": null,
   "compressed-files.json": null,
   "left4dead2": {
@@ -166,5 +143,30 @@
         "youre_awesome_emote_music.mp3.bz2": null
       }
     }
+  },
+  "servermessage": {
+    "host.html": null,
+    "img": {
+      "host": {
+        "host.png": null
+      },
+      "logo": {
+        "logo.patas.png": null,
+        "logo.patas2.png": null,
+        "logo.patas3.png": null,
+        "logo.vania.jpg": null,
+        "logo.zykklo.jpg": null
+      },
+      "motd": {
+        "motd.patas.jpg": null,
+        "motd.patas2.jpg": null,
+        "motd.png": null
+      },
+      "motd_vip": {
+        "motd_vip.patas.jpg": null
+      }
+    },
+    "motd.html": null,
+    "motd_vip.html": null
   }
 }

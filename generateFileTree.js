@@ -4,8 +4,8 @@ const path = require('path');
 const exclusions = [
     '.git', '.theme', 'compressFolders.sh', 'favicon.ico', 
     'file-tree.json', 'generateFileTree.js', 'index.html', 
-    'main.sh', 'package-lock.json', 'package.json', 
-    'README.md', 'robots.txt'
+    'build.sh', 'package-lock.json', 'package.json', 
+    'README.md', 'robots.txt', 'CNAME', 'compressed-files.json'
 ];
 
 const compressedFiles = [];
