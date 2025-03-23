@@ -370,12 +370,42 @@
     "status": 200
   },
   {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_Alliteration.mp3",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_Alliteration.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_AutumnTea.mp3",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_AutumnTea.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
     "route": "/left4dead2/sound/fortnite_emotes/emote_boogiedown.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
     "route": "/left4dead2/sound/fortnite_emotes/emote_boogiedown.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_CaliforniaGirls.mp3",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_CaliforniaGirls.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
@@ -416,6 +446,16 @@
   },
   {
     "route": "/left4dead2/sound/fortnite_emotes/Emote_Dino_Complete.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_Farewell.mp3",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_Farewell.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
@@ -500,6 +540,26 @@
     "status": 200
   },
   {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_JadeTowel.mp3",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_JadeTowel.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_JadeTowel_Gloss.mp3",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_JadeTowel_Gloss.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
     "route": "/left4dead2/sound/fortnite_emotes/emote_kpop_01.mp3",
     "target": "/index.html",
     "status": 200
@@ -540,12 +600,42 @@
     "status": 200
   },
   {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_PastelGlaze.mp3",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_PastelGlaze.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_PhoneCharger.mp3",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_PhoneCharger.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
     "route": "/left4dead2/sound/fortnite_emotes/Emote_PopRock_01.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
     "route": "/left4dead2/sound/fortnite_emotes/Emote_PopRock_01.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_RatDance.mp3",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/Emote_RatDance.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
