@@ -1,751 +1,751 @@
 [
   {
-    "route": "/left4dead2/models/fortnite_emotes/fnemotes_l4d.dx90.vtx",
+    "route": "/left4dead2/models/fortnite_emotes/ben/fnemotes.dx90.vtx",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/models/fortnite_emotes/fnemotes_l4d.dx90.vtx.bz2",
+    "route": "/left4dead2/models/fortnite_emotes/ben/fnemotes.dx90.vtx.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/models/fortnite_emotes/fnemotes_l4d.mdl",
+    "route": "/left4dead2/models/fortnite_emotes/ben/fnemotes.mdl",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/models/fortnite_emotes/fnemotes_l4d.mdl.bz2",
+    "route": "/left4dead2/models/fortnite_emotes/ben/fnemotes.mdl.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/models/fortnite_emotes/fnemotes_l4d.vvd",
+    "route": "/left4dead2/models/fortnite_emotes/ben/fnemotes.vvd",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/models/fortnite_emotes/fnemotes_l4d.vvd.bz2",
+    "route": "/left4dead2/models/fortnite_emotes/ben/fnemotes.vvd.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/models/fortnite_emotes/fnemotes_l4d2.dx90.vtx",
+    "route": "/left4dead2/models/fortnite_emotes/original/fnemotes.dx90.vtx",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/models/fortnite_emotes/fnemotes_l4d2.dx90.vtx.bz2",
+    "route": "/left4dead2/models/fortnite_emotes/original/fnemotes.dx90.vtx.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/models/fortnite_emotes/fnemotes_l4d2.mdl",
+    "route": "/left4dead2/models/fortnite_emotes/original/fnemotes.mdl",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/models/fortnite_emotes/fnemotes_l4d2.mdl.bz2",
+    "route": "/left4dead2/models/fortnite_emotes/original/fnemotes.mdl.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/models/fortnite_emotes/fnemotes_l4d2.vvd",
+    "route": "/left4dead2/models/fortnite_emotes/original/fnemotes.vvd",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/models/fortnite_emotes/fnemotes_l4d2.vvd.bz2",
+    "route": "/left4dead2/models/fortnite_emotes/original/fnemotes.vvd.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emotes_lankylegs_loop_02.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_Alliteration.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emotes_lankylegs_loop_02.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_Alliteration.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emotes_music_shoot_v7.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_AutumnTea.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emotes_music_shoot_v7.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_AutumnTea.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Athena_Emotes_Music_SwipeIt.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_CaliforniaGirls.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Athena_Emotes_Music_SwipeIt.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_CaliforniaGirls.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emotes_music_twist.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_Farewell.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emotes_music_twist.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_Farewell.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Athena_Emotes_OnTheHook_02.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_JadeTowel.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Athena_Emotes_OnTheHook_02.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_JadeTowel.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_bandofthefort_music.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_JadeTowel_Gloss.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_bandofthefort_music.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_JadeTowel_Gloss.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_breakdance_music.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_PastelGlaze.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_breakdance_music.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_PastelGlaze.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_chicken_foley_01.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_PhoneCharger.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_chicken_foley_01.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_PhoneCharger.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_disco.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_RatDance.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_disco.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_RatDance.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_electroshuffle_music.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Bendy.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_electroshuffle_music.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Bendy.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_facepalm_foley_01.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_KoreanEagle.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_facepalm_foley_01.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_KoreanEagle.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_flapper_music.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Lankylegs_02.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_flapper_music.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Lankylegs_02.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_floss_music.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Music_SwipeIt.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_floss_music.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Music_SwipeIt.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_founders_music.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Music_Twist.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_founders_music.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Music_Twist.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_fresh_music.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_OnTheHook_02.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_fresh_music.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_OnTheHook_02.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_hot_music.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Shoot_V7.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_hot_music.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Shoot_V7.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_infinidab.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Takethel.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_infinidab.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Takethel.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_makeitrain_music.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Bandofthefort.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_makeitrain_music.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Bandofthefort.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_music_boneless.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Boneless.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_music_boneless.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Boneless.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Athena_Emote_PopLock.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Breakdance.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Athena_Emote_PopLock.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Breakdance.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_ridethepony_music_01.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Chicken_Foley_01.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_ridethepony_music_01.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Chicken_Foley_01.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_robot_music.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Disco.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_robot_music.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Disco.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_salute_foley_01.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Electroshuffle.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_salute_foley_01.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Electroshuffle.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_worm_music.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Facepalm_Foley_01.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_emote_worm_music.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Facepalm_Foley_01.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_music_emotes_bendy.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Flapper.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_music_emotes_bendy.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Flapper.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Athena_Music_Emotes_KoreanEagle.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Floss.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Athena_Music_Emotes_KoreanEagle.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Floss.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_music_emotes_takethel.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Founders.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/athena_music_emotes_takethel.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Founders.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/br_emote_shred_guitar_mix_03_loop.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Fresh.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/br_emote_shred_guitar_mix_03_loop.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Fresh.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/dance_soldier_03.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Hot.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/dance_soldier_03.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Hot.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/eastern_bloc_musc_setup_d.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Infinidab.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/eastern_bloc_musc_setup_d.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Infinidab.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_aerobics_01.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_PopLock.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_aerobics_01.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_PopLock.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Alliteration.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Ridethepony_01.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Alliteration.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Ridethepony_01.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_AutumnTea.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Robot.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_AutumnTea.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Robot.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_boogiedown.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Salute_Foley_01.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_boogiedown.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Salute_Foley_01.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_CaliforniaGirls.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Worm.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_CaliforniaGirls.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Worm.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_capoeira.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Dance_Soldier_03.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_capoeira.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Dance_Soldier_03.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_cry.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Eastern_Bloc_Setup.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_cry.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Eastern_Bloc_Setup.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Dance_Pump.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Aerobics_01.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Dance_Pump.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Aerobics_01.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Dino_Complete.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Boogiedown.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Dino_Complete.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Boogiedown.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Farewell.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Capoeira.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Farewell.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Capoeira.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_FlippnSexy.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Cry.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_FlippnSexy.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Cry.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_groove_jam_a.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Dance_Pump.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_groove_jam_a.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Dance_Pump.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_HeelClick.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Dino_Complete.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_HeelClick.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Dino_Complete.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Hillbilly_Shuffle.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_FlippnSexy.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Hillbilly_Shuffle.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_FlippnSexy.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Hotstuff.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Groove_Jam_A.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Hotstuff.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Groove_Jam_A.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_hula_01.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_HeelClick.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_hula_01.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_HeelClick.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_Intensity.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Hillbilly_Shuffle.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_Intensity.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Hillbilly_Shuffle.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_irish_jig_foley_music_loop.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Hotstuff.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_irish_jig_foley_music_loop.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Hotstuff.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_JadeTowel.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Hula_01.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_JadeTowel.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Hula_01.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_JadeTowel_Gloss.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Intensity.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_JadeTowel_Gloss.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Intensity.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_kpop_01.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_IrishJig_Foley.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_kpop_01.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_IrishJig_Foley.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_laugh_01.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Kpop_01.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_laugh_01.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Kpop_01.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_LivingLarge_A.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Laugh_01.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_LivingLarge_A.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Laugh_01.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Luchador.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_LivingLarge.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Luchador.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_LivingLarge.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_PastelGlaze.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Luchador.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_PastelGlaze.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Luchador.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_PhoneCharger.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_PopRock_01.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_PhoneCharger.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_PopRock_01.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_PopRock_01.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Samba.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_PopRock_01.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Samba.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_RatDance.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Shred_Guitar_03.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_RatDance.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Shred_Guitar_03.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_samba_new_B.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Snap1.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_samba_new_B.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Snap1.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Snap1.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/emote_stagebow.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Snap1.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/emote_stagebow.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_stagebow.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Warehouse.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_stagebow.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Warehouse.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Warehouse.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Yeet.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Warehouse.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Yeet.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Yeet.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Youre_Awesome.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Emote_Yeet.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Youre_Awesome.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_zippy_A.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Zippy_A.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/emote_zippy_A.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Emote_Zippy_A.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Hip_Hop_Good_Vibes_Mix_01_Loop.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Ethena_Emote_Makeitrain.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Hip_Hop_Good_Vibes_Mix_01_Loop.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Ethena_Emote_Makeitrain.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/ninja_dance_01.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Hiphop_Breakin.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/ninja_dance_01.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Hiphop_Breakin.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/s5_hiphop_breakin_132bmp_loop.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Hip_Hop_Good_Vibes.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/s5_hiphop_breakin_132bmp_loop.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Hip_Hop_Good_Vibes.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Wiggle_Music_Loop.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Ninja_Dance_01.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/Wiggle_Music_Loop.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Ninja_Dance_01.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/youre_awesome_emote_music.mp3",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Wiggle.mp3",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/youre_awesome_emote_music.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Wiggle.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
