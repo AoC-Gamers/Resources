@@ -17,7 +17,7 @@ for dir in "${patch[@]}"; do
                 if [ ! -f "$bz2FileName" ]; then
                     # Comprimir el archivo en formato .bz2
                     echo "Comprimiendo $file a $bz2FileName"
-                    brotli -o "$bz2FileName" "$file"
+                    bzip2 -k "$file"
                 else
                     echo "El archivo $bz2FileName ya existe. Saltando compresión."
                 fi
