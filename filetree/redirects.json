@@ -15,6 +15,36 @@
     "status": 200
   },
   {
+    "route": "/left4dead2/models/fortnite_emotes/ben3/fnemotes.dx90.vtx",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/models/fortnite_emotes/ben3/fnemotes.dx90.vtx.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/models/fortnite_emotes/ben3/fnemotes.mdl",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/models/fortnite_emotes/ben3/fnemotes.mdl.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/models/fortnite_emotes/ben3/fnemotes.vvd",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/models/fortnite_emotes/ben3/fnemotes.vvd.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
     "route": "/left4dead2/models/fortnite_emotes/original/fnemotesv101.dx90.vtx.bz2",
     "target": "/index.html",
     "status": 200
