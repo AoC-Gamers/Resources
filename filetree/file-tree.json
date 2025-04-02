@@ -2,20 +2,15 @@
   "left4dead2": {
     "models": {
       "fortnite_emotes": {
-        "ben": {
-          "fnemotes.dx90.vtx.bz2": null,
-          "fnemotes.mdl.bz2": null,
-          "fnemotes.vvd.bz2": null
-        },
         "ben2": {
           "fnemotes.dx90.vtx.bz2": null,
           "fnemotes.mdl.bz2": null,
           "fnemotes.vvd.bz2": null
         },
         "original": {
-          "fnemotes.dx90.vtx.bz2": null,
-          "fnemotes.mdl.bz2": null,
-          "fnemotes.vvd.bz2": null
+          "fnemotesv101.dx90.vtx.bz2": null,
+          "fnemotesv101.mdl.bz2": null,
+          "fnemotesv101.vvd.bz2": null
         }
       }
     },

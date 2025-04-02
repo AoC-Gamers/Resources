@@ -1,20 +1,5 @@
 [
   {
-    "route": "/left4dead2/models/fortnite_emotes/ben/fnemotes.dx90.vtx.bz2",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
-    "route": "/left4dead2/models/fortnite_emotes/ben/fnemotes.mdl.bz2",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
-    "route": "/left4dead2/models/fortnite_emotes/ben/fnemotes.vvd.bz2",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
     "route": "/left4dead2/models/fortnite_emotes/ben2/fnemotes.dx90.vtx.bz2",
     "target": "/index.html",
     "status": 200
@@ -30,17 +15,17 @@
     "status": 200
   },
   {
-    "route": "/left4dead2/models/fortnite_emotes/original/fnemotes.dx90.vtx.bz2",
+    "route": "/left4dead2/models/fortnite_emotes/original/fnemotesv101.dx90.vtx.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/models/fortnite_emotes/original/fnemotes.mdl.bz2",
+    "route": "/left4dead2/models/fortnite_emotes/original/fnemotesv101.mdl.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/models/fortnite_emotes/original/fnemotes.vvd.bz2",
+    "route": "/left4dead2/models/fortnite_emotes/original/fnemotesv101.vvd.bz2",
     "target": "/index.html",
     "status": 200
   },
