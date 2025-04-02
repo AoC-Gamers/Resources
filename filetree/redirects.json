@@ -115,11 +115,6 @@
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_RatDance.mp3.bz2",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
     "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_Shimmy.mp3.bz2",
     "target": "/index.html",
     "status": 200
