@@ -60,7 +60,17 @@
     "status": 200
   },
   {
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_ChessTypeBeat.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
     "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_Comrade_6O5AK.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_Coronation.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
@@ -111,6 +121,21 @@
   },
   {
     "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_Shimmy.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_Studs.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_Vegas.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_Vinyl.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
