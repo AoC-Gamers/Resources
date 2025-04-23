@@ -105,7 +105,6 @@
       }
     }
   },
-  "MapGenerator.py": null,
   "servermessage": {
     "host.html": null,
     "img": {
@@ -132,5 +131,8 @@
     "motd.patas.html": null,
     "motd.patas2.html": null,
     "motd_vip.patas.html": null
+  },
+  "tools": {
+    "MapGenerator.py": null
   }
 }
