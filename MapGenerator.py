@@ -69,7 +69,7 @@ c14m2_lighthouse,The Last Stand,Lighthouse Finale,Oficial
 debug = False
 onlyOficial = False
 onlyWorkShop = False
-cantidad_campañas = 10
+cantidad_campañas = 15
 
 # ========= Funciones ========== #
 def generar_maplist_csv(filename):
@@ -136,6 +136,41 @@ def generar_grupos(csv_file, json_output):
 def crear_combinaciones(agrupados, limite):
     early = [k for k in agrupados if k.endswith("_Early")]
     late = [k for k in agrupados if k.endswith("_Late")]
+    combinaciones = set()  # evitar duplicados por nombre
+
+    if debug:
+        print(f"🟦 Grupos Early: {early}")
+        print(f"🟥 Grupos Late: {late}")
+
+    intentos = 0
+    max_intentos = limite * 10  # evitar bucles infinitos
+
+    while len(combinaciones) < limite and intentos < max_intentos:
+        e = random.choice(early)
+        l = random.choice(late)
+        intentos += 1
+
+        if e.split('_')[0] == l.split('_')[0]:
+            continue  # evitar misma campaña
+
+        nombre = f"{e.split('_')[0]}_{l.split('_')[0]}"
+        if nombre in combinaciones:
+            continue  # evitar combinaciones duplicadas por nombre
+
+        if debug:
+            print(f"🧪 Combinación: {nombre}")
+            print(f"   Mapas: {agrupados[e] + agrupados[l]}")
+
+        combinaciones.add(nombre)
+
+        yield {
+            "Nombre": nombre,
+            "Mapas": agrupados[e] + agrupados[l],
+            "CMD": f"sm_add_map_transition {agrupados[e][-1]} {agrupados[l][0]}"
+        }
+
+    early = [k for k in agrupados if k.endswith("_Early")]
+    late = [k for k in agrupados if k.endswith("_Late")]
     combinaciones = []
     usados_early = set()
     usados_late = set()
@@ -162,42 +197,54 @@ def crear_combinaciones(agrupados, limite):
     return combinaciones
 
 def generar_campañas(agrupados, output_file, limite):
-    combinaciones = crear_combinaciones(agrupados, limite)
+    combinaciones = list(crear_combinaciones(agrupados, limite))
     if not combinaciones:
         print("❌ No se generaron combinaciones.")
         return
-    resultado = {"Cantidad de campañas": len(combinaciones)}
+
+    resultado = {
+        "Cantidad de campañas": len(combinaciones)
+    }
+
     for c in combinaciones:
         resultado[c["Nombre"]] = {
             "Mapas": c["Mapas"],
             "CMD": c["CMD"]
         }
+
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(resultado, f, indent=4, ensure_ascii=False)
+
     print(f"✅ Archivo de campañas generado: {output_file} 📊 ({len(combinaciones)} combinaciones)")
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--debug', action='store_true')
-    parser.add_argument('--oficial', action='store_true')
-    parser.add_argument('--workshop', action='store_true')
-    parser.add_argument('--n', '--cantidad', type=int, default=10)
-    parser.add_argument('--forzar', action='store_true')
+    parser.add_argument('--debug', action='store_true', help="Activa modo debug", default=argparse.SUPPRESS)
+    parser.add_argument('--oficial', action='store_true', help="Usa solo mapas oficiales", default=argparse.SUPPRESS)
+    parser.add_argument('--workshop', action='store_true', help="Usa solo mapas de Workshop", default=argparse.SUPPRESS)
+    parser.add_argument('--n', '--cantidad', type=int, help="Cantidad de campañas a generar", default=argparse.SUPPRESS)
+    parser.add_argument('--forzar', action='store_true', help="Regenera Grupos.json aunque exista", default=argparse.SUPPRESS)
     return parser.parse_args()
 
 def main():
     global debug, onlyOficial, onlyWorkShop, cantidad_campañas
 
-    args = parse_args()
-    debug = args.debug
-    onlyOficial = args.oficial
-    onlyWorkShop = args.workshop
-    cantidad_campañas = args.n
+    args = vars(parse_args())  # convierte a diccionario para evaluar si existe la clave
+
+    # Sobrescribir solo si fueron pasados por CLI
+    if 'debug' in args: debug = True
+    if 'oficial' in args: onlyOficial = True
+    if 'workshop' in args: onlyWorkShop = True
+    if 'n' in args: cantidad_campañas = args['n']
 
     if onlyOficial and onlyWorkShop:
         print("⚠️ No puedes usar --oficial y --workshop al mismo tiempo.")
         return
 
+    if debug:
+        print(f"⚙️ Configuración activa: debug={debug}, oficial={onlyOficial}, workshop={onlyWorkShop}, cantidad={cantidad_campañas}")
+
+    # Verifica que exista el archivo Maplist.csv
     csv_file = "Maplist.csv"
     if not os.path.exists(csv_file):
         generar_maplist_csv(csv_file)
@@ -205,7 +252,7 @@ def main():
     grupos_json = "Grupos.json"
     campañas_json = "Campañas.json"
 
-    if os.path.exists(grupos_json) and not args.forzar:
+    if os.path.exists(grupos_json) and 'forzar' not in args:
         print(f"📂 Usando archivo existente: {grupos_json}")
         with open(grupos_json, "r", encoding="utf-8") as f:
             agrupados = json.load(f)
