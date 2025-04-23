@@ -445,6 +445,11 @@
     "status": 200
   },
   {
+    "route": "/MapGenerator.py",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
     "route": "/servermessage/host.html",
     "target": "/index.html",
     "status": 200
