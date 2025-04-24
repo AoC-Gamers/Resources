@@ -270,8 +270,8 @@ def generar_grupos(csv_file, json_output):
     return mapas_agrupados
 
 def crear_combinaciones(agrupados, limite):
-    early = [k for k in agrupados if k.endswith("_Early")]
-    late = [k for k in agrupados if k.endswith("_Late")]
+    early = [k for k in agrupados if k.endswith("_Early") and len(agrupados[k]) > 1]
+    late = [k for k in agrupados if k.endswith("_Late") and len(agrupados[k]) > 1]
     combinaciones = set()  # evitar duplicados por nombre
 
     if debug:
