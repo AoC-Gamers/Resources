@@ -26,6 +26,18 @@
             margin: 7px 0;
         }
 
+        .tree-root {
+            padding-left: 0;
+        }
+
+        .tree-row {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            line-height: 1.5;
+        }
+
         .folder > ul {
             display: none;
         }
@@ -34,8 +46,16 @@
             display: block;
         }
 
-        .folder > .folder-label {
+        .folder-label {
+            align-items: center;
+            background: transparent;
+            border: 0;
+            color: #ffffff;
             cursor: pointer;
+            display: inline-flex;
+            font: inherit;
+            padding: 0;
+            text-align: left;
         }
 
         .border {
@@ -71,7 +91,23 @@
         .icon {
             display: inline-block;
             margin-right: 8px;
-            width: 24px;
+            text-align: center;
+            width: 22px;
+        }
+
+        .folder-toggle {
+            display: inline-block;
+            margin-right: 8px;
+            text-align: center;
+            width: 22px;
+        }
+
+        .folder.open > .tree-row .folder-toggle::before {
+            content: "-";
+        }
+
+        .folder:not(.open) > .tree-row .folder-toggle::before {
+            content: "+";
         }
 
         .file-meta {
@@ -96,6 +132,12 @@
         .download-btn:hover {
             border-color: #62b4ff;
             color: #62b4ff;
+        }
+
+        .tree-actions {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
         }
 
         .status {
@@ -136,6 +178,11 @@
             </select>
         </div>
 
+        <div class="tree-actions">
+            <button id="expand-all" class="copy-btn" type="button">Expandir todo</button>
+            <button id="collapse-all" class="copy-btn" type="button">Contraer todo</button>
+        </div>
+
         <div id="status" class="status">Cargando recursos...</div>
         <div id="file-tree" class="border p-3 mb-4"></div>
 
@@ -156,6 +203,8 @@
         const compressedFoldersContainer = document.getElementById('compressed-folders');
         const searchInput = document.getElementById('search');
         const extensionFilter = document.getElementById('extension-filter');
+        const expandAllButton = document.getElementById('expand-all');
+        const collapseAllButton = document.getElementById('collapse-all');
         const status = document.getElementById('status');
 
         Promise.all([
@@ -182,6 +231,14 @@
         extensionFilter.addEventListener('change', event => {
             state.extension = event.target.value;
             render();
+        });
+
+        expandAllButton.addEventListener('click', () => {
+            fileTreeContainer.querySelectorAll('.folder').forEach(folder => folder.classList.add('open'));
+        });
+
+        collapseAllButton.addEventListener('click', () => {
+            fileTreeContainer.querySelectorAll('.folder').forEach(folder => folder.classList.remove('open'));
         });
 
         function fetchJson(url) {
@@ -222,6 +279,10 @@
 
         function createFileTree(tree, parentPath = '') {
             const ul = document.createElement('ul');
+            if (!parentPath) {
+                ul.classList.add('tree-root');
+            }
+
             let count = 0;
 
             for (const key in tree) {
@@ -233,19 +294,23 @@
                     if (child.count === 0) continue;
 
                     const li = document.createElement('li');
-                    li.classList.add('folder', 'open');
+                    li.classList.add('folder');
+
+                    const row = document.createElement('div');
+                    row.classList.add('tree-row');
 
                     const icon = document.createElement('span');
-                    icon.classList.add('icon');
-                    icon.textContent = 'DIR';
+                    icon.classList.add('folder-toggle');
 
-                    const label = document.createElement('span');
+                    const label = document.createElement('button');
+                    label.type = 'button';
                     label.classList.add('folder-label');
                     label.textContent = key;
                     label.onclick = () => li.classList.toggle('open');
 
-                    li.appendChild(icon);
-                    li.appendChild(label);
+                    row.appendChild(icon);
+                    row.appendChild(label);
+                    li.appendChild(row);
                     li.appendChild(child.element);
                     ul.appendChild(li);
                     count += child.count;
@@ -255,9 +320,12 @@
                 if (!matchesFilters(filePath)) continue;
 
                 const li = document.createElement('li');
+                const row = document.createElement('div');
+                row.classList.add('tree-row');
+
                 const icon = document.createElement('span');
                 icon.classList.add('icon');
-                icon.textContent = 'FILE';
+                icon.textContent = '-';
 
                 const fileLink = document.createElement('a');
                 fileLink.href = filePath;
@@ -268,10 +336,11 @@
                     fileLink.rel = 'noopener';
                 }
 
-                li.appendChild(icon);
-                li.appendChild(fileLink);
-                li.appendChild(createMetadata(filePath));
-                li.appendChild(createCopyButton(filePath));
+                row.appendChild(icon);
+                row.appendChild(fileLink);
+                row.appendChild(createMetadata(filePath));
+                row.appendChild(createCopyButton(filePath));
+                li.appendChild(row);
                 ul.appendChild(li);
                 count += 1;
             }
