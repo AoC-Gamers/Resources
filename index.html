@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Árbol de Archivos</title>
+    <title>AoC Gamers Resources</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -12,114 +12,363 @@
             background-color: #121212;
             color: #ffffff;
         }
+
+        a {
+            color: #62b4ff;
+        }
+
         ul {
             list-style-type: none;
             padding-left: 20px;
         }
+
         li {
-            margin: 5px 0;
+            margin: 7px 0;
         }
+
         .folder > ul {
             display: none;
         }
+
         .folder.open > ul {
             display: block;
         }
-        .folder > span {
+
+        .folder > .folder-label {
             cursor: pointer;
         }
+
         .border {
             border-color: #444444 !important;
         }
+
         .container {
             background-color: #1e1e1e;
             padding: 20px;
             border-radius: 8px;
         }
-        .icon {
-            margin-right: 8px;
+
+        .toolbar {
+            display: grid;
+            grid-template-columns: 1fr 180px;
+            gap: 12px;
+            margin-bottom: 18px;
         }
+
+        .form-control {
+            background-color: #111111;
+            border-color: #555555;
+            color: #ffffff;
+        }
+
+        .form-control:focus {
+            background-color: #111111;
+            border-color: #62b4ff;
+            color: #ffffff;
+            box-shadow: none;
+        }
+
+        .icon {
+            display: inline-block;
+            margin-right: 8px;
+            width: 24px;
+        }
+
+        .file-meta {
+            color: #b9b9b9;
+            font-size: 0.9rem;
+            margin-left: 8px;
+        }
+
+        .copy-btn,
         .download-btn {
-            margin-left: 10px;
+            background: transparent;
+            border: 1px solid #555555;
+            border-radius: 6px;
+            color: #ffffff;
             cursor: pointer;
-            color: #007bff;
+            font-size: 0.85rem;
+            margin-left: 8px;
+            padding: 2px 8px;
+        }
+
+        .copy-btn:hover,
+        .download-btn:hover {
+            border-color: #62b4ff;
+            color: #62b4ff;
+        }
+
+        .status {
+            color: #b9b9b9;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                margin: 10px;
+            }
+
+            .container {
+                padding: 14px;
+            }
+
+            .toolbar {
+                grid-template-columns: 1fr;
+            }
+
+            .file-meta,
+            .copy-btn {
+                display: block;
+                margin-left: 32px;
+                margin-top: 5px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="my-4">Árbol de Archivos</h1>
+    <main class="container">
+        <h1 class="my-4">AoC Gamers Resources</h1>
+
+        <div class="toolbar">
+            <input id="search" class="form-control" type="search" placeholder="Buscar archivo">
+            <select id="extension-filter" class="form-control">
+                <option value="">Todas las extensiones</option>
+            </select>
+        </div>
+
+        <div id="status" class="status">Cargando recursos...</div>
         <div id="file-tree" class="border p-3 mb-4"></div>
-        <h2 class="my-4">Carpetas Comprimidas</h2>
+
+        <h2 class="my-4">Carpetas comprimidas</h2>
         <ul id="compressed-folders" class="border p-3"></ul>
-    </div>
+    </main>
 
     <script>
-        fetch('filetree/file-tree.json')
-            .then(response => response.json())
-            .then(data => {
-                const fileTreeContainer = document.getElementById('file-tree');
-                fileTreeContainer.appendChild(createFileTree(data));
+        const state = {
+            tree: {},
+            compressedFiles: [],
+            manifest: {},
+            query: '',
+            extension: ''
+        };
+
+        const fileTreeContainer = document.getElementById('file-tree');
+        const compressedFoldersContainer = document.getElementById('compressed-folders');
+        const searchInput = document.getElementById('search');
+        const extensionFilter = document.getElementById('extension-filter');
+        const status = document.getElementById('status');
+
+        Promise.all([
+            fetchJson('filetree/file-tree.json'),
+            fetchJson('filetree/compressed-files.json'),
+            fetchJson('filetree/manifest.json')
+        ])
+            .then(([tree, compressedFiles, manifest]) => {
+                state.tree = tree;
+                state.compressedFiles = compressedFiles;
+                state.manifest = manifest;
+                populateExtensionFilter(manifest);
+                render();
+            })
+            .catch(error => {
+                status.textContent = `No se pudieron cargar los recursos: ${error.message}`;
             });
+
+        searchInput.addEventListener('input', event => {
+            state.query = event.target.value.trim().toLowerCase();
+            render();
+        });
+
+        extensionFilter.addEventListener('change', event => {
+            state.extension = event.target.value;
+            render();
+        });
+
+        function fetchJson(url) {
+            return fetch(url).then(response => {
+                if (!response.ok) {
+                    throw new Error(`${url} respondio ${response.status}`);
+                }
+
+                return response.json();
+            });
+        }
+
+        function populateExtensionFilter(manifest) {
+            const extensions = [...new Set(Object.keys(manifest)
+                .map(filePath => filePath.match(/\.([^.\/]+)$/))
+                .filter(Boolean)
+                .map(match => match[1].toLowerCase()))]
+                .sort((a, b) => a.localeCompare(b));
+
+            for (const extension of extensions) {
+                const option = document.createElement('option');
+                option.value = extension;
+                option.textContent = `.${extension}`;
+                extensionFilter.appendChild(option);
+            }
+        }
+
+        function render() {
+            fileTreeContainer.textContent = '';
+            compressedFoldersContainer.textContent = '';
+
+            const result = createFileTree(state.tree);
+            fileTreeContainer.appendChild(result.element);
+
+            status.textContent = `${result.count} archivo${result.count === 1 ? '' : 's'} disponible${result.count === 1 ? '' : 's'}`;
+            renderCompressedFiles();
+        }
 
         function createFileTree(tree, parentPath = '') {
             const ul = document.createElement('ul');
+            let count = 0;
+
             for (const key in tree) {
+                const filePath = parentPath ? `${parentPath}/${key}` : key;
+                const value = tree[key];
+
+                if (value) {
+                    const child = createFileTree(value, filePath);
+                    if (child.count === 0) continue;
+
+                    const li = document.createElement('li');
+                    li.classList.add('folder', 'open');
+
+                    const icon = document.createElement('span');
+                    icon.classList.add('icon');
+                    icon.textContent = 'DIR';
+
+                    const label = document.createElement('span');
+                    label.classList.add('folder-label');
+                    label.textContent = key;
+                    label.onclick = () => li.classList.toggle('open');
+
+                    li.appendChild(icon);
+                    li.appendChild(label);
+                    li.appendChild(child.element);
+                    ul.appendChild(li);
+                    count += child.count;
+                    continue;
+                }
+
+                if (!matchesFilters(filePath)) continue;
+
                 const li = document.createElement('li');
                 const icon = document.createElement('span');
                 icon.classList.add('icon');
-                const filePath = parentPath ? `${parentPath}/${key}` : key;
-                if (tree[key]) {
-                    li.classList.add('folder');
-                    icon.textContent = '📁';
-                    const span = document.createElement('span');
-                    span.textContent = key;
-                    span.onclick = () => li.classList.toggle('open');
-                    li.appendChild(icon);
-                    li.appendChild(span);
-                    li.appendChild(createFileTree(tree[key], filePath));
-                } else {
-                    icon.textContent = '📄';
-                    const fileLink = document.createElement('a');
-                    fileLink.href = filePath;
-                    fileLink.textContent = key;
-                    if (key.endsWith('.html') || key.match(/\.(jpg|jpeg|png|gif|bmp|svg)$/i)) {
-                        fileLink.target = '_blank';
-                    }
-                    li.appendChild(icon);
-                    li.appendChild(fileLink);
+                icon.textContent = 'FILE';
+
+                const fileLink = document.createElement('a');
+                fileLink.href = filePath;
+                fileLink.textContent = key;
+
+                if (key.endsWith('.html') || key.match(/\.(jpg|jpeg|png|gif|bmp|svg)$/i)) {
+                    fileLink.target = '_blank';
+                    fileLink.rel = 'noopener';
                 }
+
+                li.appendChild(icon);
+                li.appendChild(fileLink);
+                li.appendChild(createMetadata(filePath));
+                li.appendChild(createCopyButton(filePath));
                 ul.appendChild(li);
+                count += 1;
             }
-            return ul;
+
+            return { element: ul, count };
         }
 
-        fetchCompressedFolders();
+        function matchesFilters(filePath) {
+            const normalizedPath = filePath.toLowerCase();
 
-        function fetchCompressedFolders() {
-            fetch('filetree/compressed-files.json')
-                .then(response => response.json())
-                .then(data => {
-                    const compressedFoldersContainer = document.getElementById('compressed-folders');
-                    data.forEach(file => {
-                        const li = document.createElement('li');
-                        const icon = document.createElement('span');
-                        icon.classList.add('icon');
-                        icon.textContent = '📦';
-                        const downloadLink = document.createElement('a');
-                        downloadLink.href = file;
-                        downloadLink.download = file;
-                        const downloadBtn = document.createElement('span');
-                        downloadBtn.textContent = 'Descargar';
-                        downloadBtn.classList.add('download-btn');
-                        downloadBtn.onclick = () => downloadLink.click();
-                        li.appendChild(icon);
-                        li.appendChild(document.createTextNode(file));
-                        li.appendChild(downloadBtn);
-                        li.appendChild(downloadLink);
-                        compressedFoldersContainer.appendChild(li);
-                    });
+            if (state.query && !normalizedPath.includes(state.query)) {
+                return false;
+            }
+
+            if (state.extension && !normalizedPath.endsWith(`.${state.extension}`)) {
+                return false;
+            }
+
+            return true;
+        }
+
+        function createMetadata(filePath) {
+            const metadata = state.manifest[filePath];
+            const span = document.createElement('span');
+            span.classList.add('file-meta');
+
+            if (!metadata) {
+                span.textContent = '';
+                return span;
+            }
+
+            span.textContent = `${formatBytes(metadata.size)} sha256:${metadata.sha256.slice(0, 12)}`;
+            return span;
+        }
+
+        function createCopyButton(filePath) {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.classList.add('copy-btn');
+            button.textContent = 'Copiar URL';
+            button.onclick = () => copyUrl(filePath, button);
+            return button;
+        }
+
+        function renderCompressedFiles() {
+            for (const file of state.compressedFiles) {
+                const li = document.createElement('li');
+                const icon = document.createElement('span');
+                icon.classList.add('icon');
+                icon.textContent = 'ZIP';
+
+                const downloadLink = document.createElement('a');
+                downloadLink.href = file;
+                downloadLink.download = file;
+                downloadLink.textContent = file;
+
+                const metadata = createMetadata(file);
+                const copyButton = createCopyButton(file);
+
+                const downloadButton = document.createElement('button');
+                downloadButton.type = 'button';
+                downloadButton.textContent = 'Descargar';
+                downloadButton.classList.add('download-btn');
+                downloadButton.onclick = () => downloadLink.click();
+
+                li.appendChild(icon);
+                li.appendChild(downloadLink);
+                li.appendChild(metadata);
+                li.appendChild(downloadButton);
+                li.appendChild(copyButton);
+                compressedFoldersContainer.appendChild(li);
+            }
+        }
+
+        function copyUrl(filePath, button) {
+            const url = new URL(filePath, window.location.href).href;
+
+            navigator.clipboard.writeText(url)
+                .then(() => {
+                    button.textContent = 'Copiado';
+                    setTimeout(() => {
+                        button.textContent = 'Copiar URL';
+                    }, 1200);
+                })
+                .catch(() => {
+                    window.prompt('Copia la URL', url);
                 });
+        }
+
+        function formatBytes(bytes) {
+            if (bytes === 0) return '0 B';
+
+            const units = ['B', 'KB', 'MB', 'GB'];
+            const size = Math.min(Math.floor(Math.log(bytes) / Math.log(1024)), units.length - 1);
+            const value = bytes / (1024 ** size);
+
+            return `${value.toFixed(value >= 10 || size === 0 ? 0 : 1)} ${units[size]}`;
         }
     </script>
 </body>

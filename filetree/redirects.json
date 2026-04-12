@@ -85,12 +85,12 @@
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_JadeTowel.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_JadeTowel_Gloss.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_JadeTowel_Gloss.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_JadeTowel.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
@@ -136,46 +136,6 @@
   },
   {
     "route": "/left4dead2/sound/fortnite_emotes/ben/Emote_Vivid_I434X.mp3.bz2",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
-    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Bendy.mp3.bz2",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
-    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_KoreanEagle.mp3.bz2",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
-    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Lankylegs_02.mp3.bz2",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
-    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Music_SwipeIt.mp3.bz2",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
-    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Music_Twist.mp3.bz2",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
-    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_OnTheHook_02.mp3.bz2",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
-    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Shoot_V7.mp3.bz2",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
-    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Takethel.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
@@ -266,6 +226,46 @@
   },
   {
     "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emote_Worm.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Bendy.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_KoreanEagle.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Lankylegs_02.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Music_SwipeIt.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Music_Twist.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_OnTheHook_02.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Shoot_V7.mp3.bz2",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/left4dead2/sound/fortnite_emotes/original/Athena_Emotes_Takethel.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
@@ -420,12 +420,12 @@
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/original/Hiphop_Breakin.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Hip_Hop_Good_Vibes.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/left4dead2/sound/fortnite_emotes/original/Hip_Hop_Good_Vibes.mp3.bz2",
+    "route": "/left4dead2/sound/fortnite_emotes/original/Hiphop_Breakin.mp3.bz2",
     "target": "/index.html",
     "status": 200
   },
@@ -446,6 +446,21 @@
   },
   {
     "route": "/servermessage/host.html",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/servermessage/img/custom/motd-fondo.png",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/servermessage/img/custom/QR-Discord.png",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/servermessage/img/custom/QR-Discord2.png",
     "target": "/index.html",
     "status": 200
   },
@@ -480,22 +495,47 @@
     "status": 200
   },
   {
-    "route": "/servermessage/img/motd/motd.patas.jpg",
+    "route": "/servermessage/img/motd/motd.classic01.png",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/servermessage/img/motd/motd.patas2.jpg",
+    "route": "/servermessage/img/motd/motd.classic02.png",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/servermessage/img/motd/motd.png",
+    "route": "/servermessage/img/motd/motd.gpt01.png",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/servermessage/img/motd_vip/motd_vip.patas.jpg",
+    "route": "/servermessage/img/motd/motd.patas01.jpg",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/servermessage/img/motd/motd.patas02.jpg",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/servermessage/img/motd/motd.patas03.png",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/servermessage/img/motd/motd.patas04.png",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/servermessage/img/motd/motd.patasvip01.jpg",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/servermessage/motd_vip.patas.html",
     "target": "/index.html",
     "status": 200
   },
@@ -511,11 +551,6 @@
   },
   {
     "route": "/servermessage/motd.patas2.html",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
-    "route": "/servermessage/motd_vip.patas.html",
     "target": "/index.html",
     "status": 200
   },

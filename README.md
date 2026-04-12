@@ -1,86 +1,128 @@
 # AoC Gamers Resources
 
-Este proyecto proporciona recursos para usuarios y servidores, facilitando la gestión de páginas estáticas, recursos multimedia y archivos de redirección para diferentes servicios y juegos.
+Este proyecto publica recursos estaticos para usuarios y servidores de AoC Gamers. Incluye paginas HTML simples, recursos multimedia, archivos comprimidos y un indice navegable del arbol de archivos.
+
+## Requisitos
+
+- Node.js 22 o superior.
+- npm, incluido con Node.js.
+
+No se requiere Ruby, Jekyll, MSYS2 ni DevKit para compilar el proyecto.
 
 ## Contenido del Proyecto
 
 ### Servermessage
 
-- **Descripción:**  
-  Páginas estáticas creadas con Jekyll en Ruby. Los archivos HTML se generan a partir de una plantilla base en `_layouts/default.html`. También se guardan imágenes usadas en servidores u otros servicios (logos, mensajes del día, etc.).
+Paginas HTML estaticas usadas por servidores u otros servicios. Las paginas se generan desde la configuracion:
 
-- **Requisitos:**  
-  Ruby y MSYS2/DevKit (o herramientas de desarrollo correspondientes) para compilar dependencias y ejecutar Jekyll.
+```text
+scripts/servermessage-pages.json
+```
 
-- **Desarrollo y Uso:**  
-  - Para compilar dependencias o realizar cambios en los archivos HTML, ejecuta:
-    ```bash
-    bundle install
-    ```
-  - Para iniciar el servidor local y probar el sitio, usa:
-    ```bash
-    bundle exec jekyll serve
-    ```
-    El sitio estará disponible en [http://127.0.0.1:4000](http://127.0.0.1:4000).
+El build escribe los HTML finales en:
+
+```text
+servermessage/
+```
+
+Las imagenes usadas por esas paginas se guardan en:
+
+```text
+servermessage/img/
+```
+
+Para nuevas imagenes que no pertenezcan a una categoria existente, usa:
+
+```text
+servermessage/img/custom/
+```
 
 ### Left4Dead2
 
-- **Descripción:**  
-  Recursos como archivos MDR, MP3, etc., necesarios para los clientes de los servidores de juego.
+Recursos como archivos MDR, MP3, BZ2, etc., necesarios para los clientes de los servidores de juego.
 
-- **Actualización de Recursos:**  
-  Actualiza la tabla de descargas del complemento que utiliza algún recurso y sube el archivo correspondiente al directorio adecuado.
+El build comprime la carpeta:
 
-- **Script de Compresión:**  
-  Incluye un script que comprime la carpeta en un archivo `.zip`, facilitando la descarga manual al cliente.
+```text
+left4dead2/
+```
 
-### Árbol de Archivos
+y genera:
 
-- **Descripción:**  
-  `index.html` actúa como índice principal del proyecto, mostrando recursivamente el árbol de archivos generado a partir de `file-tree.json`.
+```text
+left4dead2.zip
+```
 
-- **Generación del Árbol:**  
-  Ejecuta el script `build.sh`, que invoca los siguientes scripts secundarios:
-  
-  - **exclusions.js:**  
-    Define archivos y directorios a excluir en otros scripts.
-  
-  - **generateFileTree.js:**  
-    Genera un árbol de archivos en formato JSON, excluyendo elementos definidos en `exclusions.js`. El resultado se guarda en `file-tree.json` y también se genera una lista de archivos comprimidos en `compressed-files.json`.
-  
-  - **generateRedirects.js:**  
-    Genera un archivo de redirecciones (`redirects.json`) para el sitio web estático, excluyendo elementos definidos en `exclusions.js`. Cada archivo se redirige a `index.html`.
-  
-  - **compressFolders.sh:**  
-    Comprime las carpetas especificadas en archivos `.zip`. Las carpetas a comprimir se definen dentro del script.
+### Arbol de Archivos
 
-## Uso y Ejecución
+`index.html` actua como indice principal del proyecto. Lee los archivos generados en `filetree/` para mostrar el arbol de archivos y las carpetas comprimidas disponibles.
 
-1. **Instalación de Dependencias:**  
-   Asegúrate de tener instalado Ruby y MSYS2/DevKit. Luego, desde la raíz del proyecto, ejecuta:
-   ```bash
-   bundle install
-   ```
-2. **Compilación del Sitio (Servermessage):**  
-   Para compilar y ver los cambios en las páginas estáticas, inicia el servidor local con:
-   ```bash
-   bundle exec jekyll serve
-   ```
-   Visita [http://127.0.0.1:4000](http://127.0.0.1:4000) para ver el sitio en acción.
-3. **Generar Árbol y Redirecciones:**  
-   Ejecuta el script de construcción:
-   ```bash
-   ./build.sh
-   ```
-   Esto generará:
-  - El árbol de archivos (`file-tree.json`).
-  - La lista de archivos comprimidos (`compressed-files.json`).
-  - El archivo de redirecciones (`_redirects`).
-  - Además, comprimirá las carpetas especificadas.
+El indice incluye busqueda por nombre, filtro por extension, tamano de archivo, hash SHA-256 corto y botones para copiar URLs directas.
 
-## Notas Adicionales
-1. **GitHub Pages y Jekyll:**  
-   El proyecto se puede desplegar en GitHub Pages. Se recomienda ignorar en Git los archivos generados, por ejemplo, `_site/`, agregándolos a `.gitignore`.
+El build genera:
 
-2. **Optimización de Scripts:**  
-   Los scripts `generateFileTree.js` y `generateRedirects.js` utilizan `exclusions.js` para definir archivos y directorios a excluir, asegurando una única fuente.
+- `filetree/file-tree.json`
+- `filetree/compressed-files.json`
+- `filetree/manifest.json`
+- `filetree/redirects.json`
+- `.nojekyll`
+
+`.nojekyll` indica a GitHub Pages que publique el contenido como archivos estaticos, sin procesarlo con Jekyll.
+
+`manifest.json` incluye tamano y hash SHA-256 de cada archivo publico generado o servido.
+
+## Uso
+
+Instala dependencias:
+
+```bash
+npm install
+```
+
+Compila todo el proyecto:
+
+```bash
+npm run build
+```
+
+Tambien puedes usar los wrappers por sistema:
+
+```bash
+./build.sh
+```
+
+```powershell
+.\build.ps1
+```
+
+Los tres comandos ejecutan el mismo build Node:
+
+```bash
+node ./scripts/build.js
+```
+
+## Publicacion en GitHub Pages
+
+El proyecto queda listo para publicarse como sitio estatico desde GitHub Pages. Configura Pages para publicar desde la rama correspondiente y la raiz del repositorio.
+
+Como el repo incluye `.nojekyll`, GitHub Pages no necesita compilar Jekyll. Los archivos generados se sirven directamente.
+
+## Integracion Continua
+
+El workflow de GitHub Actions en `.github/workflows/build.yml` usa Node.js 22, ejecuta `npm ci`, corre `npm run build` y verifica que los archivos generados esten actualizados con `git diff --exit-code`.
+
+## Scripts Principales
+
+- `scripts/build.js`: build principal en Node.
+- `scripts/exclusions.js`: define archivos y directorios excluidos del arbol y redirects.
+- `scripts/servermessage-pages.json`: define las paginas HTML generadas para `servermessage`.
+- `build.sh`: wrapper Bash compatible.
+- `build.ps1`: wrapper PowerShell compatible.
+- `.nvmrc` y `.node-version`: fijan Node.js 22 para gestores de version.
+
+## Notas
+
+- Los archivos dentro de `filetree/` y `left4dead2.zip` se regeneran con `npm run build`.
+- Si agregas una nueva pagina `servermessage`, anadela primero a `scripts/servermessage-pages.json`.
+- El build valida que cada imagen declarada en `scripts/servermessage-pages.json` exista.
+- Si agregas archivos internos que no deben aparecer en el indice publico, agregalos a `scripts/exclusions.js`.

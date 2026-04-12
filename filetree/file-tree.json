@@ -28,8 +28,8 @@
           "Emote_Coronation.mp3.bz2": null,
           "Emote_Devotion.mp3.bz2": null,
           "Emote_Farewell.mp3.bz2": null,
-          "Emote_JadeTowel.mp3.bz2": null,
           "Emote_JadeTowel_Gloss.mp3.bz2": null,
+          "Emote_JadeTowel.mp3.bz2": null,
           "Emote_JumpingJoy_WKPG4.mp3.bz2": null,
           "Emote_LetsBegin.mp3.bz2": null,
           "Emote_PastelGlaze.mp3.bz2": null,
@@ -41,14 +41,6 @@
           "Emote_Vivid_I434X.mp3.bz2": null
         },
         "original": {
-          "Athena_Emotes_Bendy.mp3.bz2": null,
-          "Athena_Emotes_KoreanEagle.mp3.bz2": null,
-          "Athena_Emotes_Lankylegs_02.mp3.bz2": null,
-          "Athena_Emotes_Music_SwipeIt.mp3.bz2": null,
-          "Athena_Emotes_Music_Twist.mp3.bz2": null,
-          "Athena_Emotes_OnTheHook_02.mp3.bz2": null,
-          "Athena_Emotes_Shoot_V7.mp3.bz2": null,
-          "Athena_Emotes_Takethel.mp3.bz2": null,
           "Athena_Emote_Bandofthefort.mp3.bz2": null,
           "Athena_Emote_Boneless.mp3.bz2": null,
           "Athena_Emote_Breakdance.mp3.bz2": null,
@@ -67,6 +59,14 @@
           "Athena_Emote_Robot.mp3.bz2": null,
           "Athena_Emote_Salute_Foley_01.mp3.bz2": null,
           "Athena_Emote_Worm.mp3.bz2": null,
+          "Athena_Emotes_Bendy.mp3.bz2": null,
+          "Athena_Emotes_KoreanEagle.mp3.bz2": null,
+          "Athena_Emotes_Lankylegs_02.mp3.bz2": null,
+          "Athena_Emotes_Music_SwipeIt.mp3.bz2": null,
+          "Athena_Emotes_Music_Twist.mp3.bz2": null,
+          "Athena_Emotes_OnTheHook_02.mp3.bz2": null,
+          "Athena_Emotes_Shoot_V7.mp3.bz2": null,
+          "Athena_Emotes_Takethel.mp3.bz2": null,
           "Dance_Soldier_03.mp3.bz2": null,
           "Eastern_Bloc_Setup.mp3.bz2": null,
           "Emote_Aerobics_01.mp3.bz2": null,
@@ -97,8 +97,8 @@
           "Emote_Youre_Awesome.mp3.bz2": null,
           "Emote_Zippy_A.mp3.bz2": null,
           "Ethena_Emote_Makeitrain.mp3.bz2": null,
-          "Hiphop_Breakin.mp3.bz2": null,
           "Hip_Hop_Good_Vibes.mp3.bz2": null,
+          "Hiphop_Breakin.mp3.bz2": null,
           "Ninja_Dance_01.mp3.bz2": null,
           "Wiggle.mp3.bz2": null
         }
@@ -108,6 +108,11 @@
   "servermessage": {
     "host.html": null,
     "img": {
+      "custom": {
+        "motd-fondo.png": null,
+        "QR-Discord.png": null,
+        "QR-Discord2.png": null
+      },
       "host": {
         "host.png": null
       },
@@ -119,18 +124,20 @@
         "logo.zykklo.jpg": null
       },
       "motd": {
-        "motd.patas.jpg": null,
-        "motd.patas2.jpg": null,
-        "motd.png": null
-      },
-      "motd_vip": {
-        "motd_vip.patas.jpg": null
+        "motd.classic01.png": null,
+        "motd.classic02.png": null,
+        "motd.gpt01.png": null,
+        "motd.patas01.jpg": null,
+        "motd.patas02.jpg": null,
+        "motd.patas03.png": null,
+        "motd.patas04.png": null,
+        "motd.patasvip01.jpg": null
       }
     },
+    "motd_vip.patas.html": null,
     "motd.html": null,
     "motd.patas.html": null,
-    "motd.patas2.html": null,
-    "motd_vip.patas.html": null
+    "motd.patas2.html": null
   },
   "tools": {
     "MapGenerator.py": null

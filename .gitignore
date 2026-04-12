@@ -1,9 +1,12 @@
-# Archivos generados por Jekyll
+# Archivos generados por Jekyll (legacy)
 _site/
 .jekyll-cache/
 
 # Dependencias de Ruby
 Gemfile.lock
+
+# Dependencias de Node
+node_modules/
 
 # Archivos temporales o de respaldo
 *.swp

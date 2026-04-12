@@ -1,10 +1,14 @@
 {
-  "name": "file-tree-generator",
+  "name": "aoc-gamers-resources",
   "version": "1.0.0",
-  "description": "Genera un árbol de archivos para el índice.",
-  "main": "generateFileTree.js",
+  "description": "Build estatico para recursos de AoC Gamers.",
+  "main": "scripts/build.js",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
-    "generate": "node generateFileTree.js"
+    "build": "node ./scripts/build.js",
+    "generate": "node ./scripts/build.js"
   },
   "author": "",
   "license": "ISC"

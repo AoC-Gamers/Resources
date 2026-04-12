@@ -3,7 +3,10 @@
 const exclusions = new Set([
     // Git
     '.git',
+    '.github',
     '.gitignore',
+    '.gitkeep',
+    '.nojekyll',
     '.vscode',
     'README.md',
 
@@ -17,11 +20,14 @@ const exclusions = new Set([
     '_redirects',
 
     // Node
+    '.node-version',
+    '.nvmrc',
     'package-lock.json',
     'package.json',
 
     // Scripts
     'build.sh',
+    'build.ps1',
     'scripts',
     'filetree',
 

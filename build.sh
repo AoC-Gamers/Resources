@@ -1,12 +1,13 @@
 #!/bin/bash
+set -e
 
-# Ejecutar el script de compresión de carpetas
-./scripts/compressFolders.sh
-
-# Ejecutar el script de generación del árbol de archivos
-node ./scripts/generateFileTree.js
-
-# Ejecutar el script de generación de redirecciones
-node ./scripts/generateRedirects.js
-
-echo "Build completado correctamente."
+if command -v node >/dev/null 2>&1; then
+  node ./scripts/build.js
+elif command -v node.exe >/dev/null 2>&1; then
+  node.exe ./scripts/build.js
+elif command -v powershell.exe >/dev/null 2>&1; then
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./build.ps1
+else
+  echo "Node.js no esta disponible en PATH. Instala Node.js o ejecuta .\\build.ps1 desde PowerShell." >&2
+  exit 1
+fi
