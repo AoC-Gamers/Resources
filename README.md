@@ -16,7 +16,7 @@ No se requiere Ruby, Jekyll, MSYS2 ni DevKit para compilar el proyecto.
 Paginas HTML estaticas usadas por servidores u otros servicios. Las paginas se generan desde la configuracion:
 
 ```text
-scripts/servermessage-pages.json
+src/config/servermessage-pages.json
 ```
 
 El build escribe los HTML finales en:
@@ -113,9 +113,10 @@ El workflow de GitHub Actions en `.github/workflows/build.yml` usa Node.js 22, e
 
 ## Scripts Principales
 
-- `scripts/build.js`: build principal en Node.
-- `scripts/exclusions.js`: define archivos y directorios excluidos del arbol y redirects.
-- `scripts/servermessage-pages.json`: define las paginas HTML generadas para `servermessage`.
+- `src/build/build.js`: build principal en Node.
+- `src/build/exclusions.js`: define archivos y directorios excluidos del arbol, manifiesto y redirects.
+- `src/config/servermessage-pages.json`: define las paginas HTML generadas para `servermessage`.
+- `scripts/build.js`: wrapper estable para ejecutar el build desde npm, Bash y PowerShell.
 - `build.sh`: wrapper Bash compatible.
 - `build.ps1`: wrapper PowerShell compatible.
 - `.nvmrc` y `.node-version`: fijan Node.js 22 para gestores de version.
@@ -123,6 +124,6 @@ El workflow de GitHub Actions en `.github/workflows/build.yml` usa Node.js 22, e
 ## Notas
 
 - Los archivos dentro de `filetree/` y `left4dead2.zip` se regeneran con `npm run build`.
-- Si agregas una nueva pagina `servermessage`, anadela primero a `scripts/servermessage-pages.json`.
-- El build valida que cada imagen declarada en `scripts/servermessage-pages.json` exista.
-- Si agregas archivos internos que no deben aparecer en el indice publico, agregalos a `scripts/exclusions.js`.
+- Si agregas una nueva pagina `servermessage`, anadela primero a `src/config/servermessage-pages.json`.
+- El build valida que cada imagen declarada en `src/config/servermessage-pages.json` exista.
+- Si agregas archivos internos que no deben aparecer en el indice publico, agregalos a `src/build/exclusions.js`.
