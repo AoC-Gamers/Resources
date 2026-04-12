@@ -117,27 +117,24 @@
         "host.png": null
       },
       "logo": {
-        "logo.patas.png": null,
-        "logo.patas2.png": null,
-        "logo.patas3.png": null,
-        "logo.vania.jpg": null,
-        "logo.zykklo.jpg": null
+        "patas.png": null,
+        "patas2.png": null,
+        "patas3.png": null,
+        "vania.jpg": null,
+        "zykklo.jpg": null
       },
       "motd": {
-        "motd.classic01.png": null,
-        "motd.classic02.png": null,
-        "motd.gpt01.png": null,
-        "motd.patas01.jpg": null,
-        "motd.patas02.jpg": null,
-        "motd.patas03.png": null,
-        "motd.patas04.png": null,
-        "motd.patasvip01.jpg": null
+        "classic01.png": null,
+        "classic02.png": null,
+        "gpt01.png": null,
+        "patas01.jpg": null,
+        "patas02.jpg": null,
+        "patas03.png": null,
+        "patas04.png": null,
+        "patasvip01.jpg": null
       }
     },
-    "motd_vip.patas.html": null,
-    "motd.html": null,
-    "motd.patas.html": null,
-    "motd.patas2.html": null
+    "motd.html": null
   },
   "tools": {
     "MapGenerator.py": null

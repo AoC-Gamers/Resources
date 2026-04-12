@@ -25,6 +25,47 @@ function escapeHtml(value) {
     .replace(/"/g, '&quot;');
 }
 
+function validateImagePath(src, pageFile) {
+  const imagePath = path.join(rootDir, src.replace(/^\//, ''));
+  if (!fs.existsSync(imagePath)) {
+    throw new Error(`Imagen no encontrada para ${pageFile}: ${src}`);
+  }
+}
+
+function normalizePageImages(page) {
+  const images = { default: page.src, ...(page.images || {}) };
+
+  for (const [key, src] of Object.entries(images)) {
+    if (!key || !src) {
+      throw new Error(`Imagen invalida en ${page.file}.`);
+    }
+
+    validateImagePath(src, page.file);
+  }
+
+  return images;
+}
+
+function renderDynamicImageScript(images) {
+  const imageEntries = JSON.stringify(images, null, 6);
+
+  return `    <script>
+      const allowedImages = ${imageEntries};
+      const params = new URLSearchParams(window.location.search);
+      const requestedImage = params.get('img');
+      const requestedSource = params.get('src');
+      const image = document.getElementById('servermessage-image');
+      const allowedSources = new Set(Object.values(allowedImages));
+
+      if (requestedImage && allowedImages[requestedImage]) {
+        image.src = allowedImages[requestedImage];
+      } else if (requestedSource && allowedSources.has(requestedSource)) {
+        image.src = requestedSource;
+      }
+    </script>
+`;
+}
+
 function renderServerMessages() {
   const outputDir = path.join(rootDir, 'servermessage');
   ensureDir(outputDir);
@@ -34,10 +75,8 @@ function renderServerMessages() {
       throw new Error('Cada pagina servermessage debe definir file, title y src.');
     }
 
-    const imagePath = path.join(rootDir, page.src.replace(/^\//, ''));
-    if (!fs.existsSync(imagePath)) {
-      throw new Error(`Imagen no encontrada para ${page.file}: ${page.src}`);
-    }
+    const images = normalizePageImages(page);
+    const dynamicImageScript = page.images ? renderDynamicImageScript(images) : '';
 
     const html = `<!DOCTYPE html>
 <html lang="en">
@@ -46,7 +85,8 @@ function renderServerMessages() {
     <title>${escapeHtml(page.title)} AoC</title>
   </head>
   <body style="margin:0; padding:0; background:#000; overflow-y: hidden;">
-    <img alt="${escapeHtml(page.title)}" src="${escapeHtml(page.src)}" style="width:100%;height:100%;">
+    <img id="servermessage-image" alt="${escapeHtml(page.title)}" src="${escapeHtml(page.src)}" style="width:100%;height:100%;">
+${dynamicImageScript}
   </body>
 </html>
 `;

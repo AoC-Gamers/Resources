@@ -5,6 +5,24 @@
     <title>HOST AoC</title>
   </head>
   <body style="margin:0; padding:0; background:#000; overflow-y: hidden;">
-    <img alt="HOST" src="/servermessage/img/host/host.png" style="width:100%;height:100%;">
+    <img id="servermessage-image" alt="HOST" src="/servermessage/img/host/host.png" style="width:100%;height:100%;">
+    <script>
+      const allowedImages = {
+      "default": "/servermessage/img/host/host.png",
+      "host": "/servermessage/img/host/host.png"
+};
+      const params = new URLSearchParams(window.location.search);
+      const requestedImage = params.get('img');
+      const requestedSource = params.get('src');
+      const image = document.getElementById('servermessage-image');
+      const allowedSources = new Set(Object.values(allowedImages));
+
+      if (requestedImage && allowedImages[requestedImage]) {
+        image.src = allowedImages[requestedImage];
+      } else if (requestedSource && allowedSources.has(requestedSource)) {
+        image.src = requestedSource;
+      }
+    </script>
+
   </body>
 </html>

@@ -25,6 +25,24 @@ El build escribe los HTML finales en:
 servermessage/
 ```
 
+Las paginas pueden definir imagenes alternativas en `images`. Si una pagina tiene alternativas, se puede seleccionar una imagen por URL:
+
+```text
+/servermessage/motd.html?img=classic02
+```
+
+```text
+/servermessage/host.html?img=host
+```
+
+`host.html` solo permite imagenes dentro de `/servermessage/img/host/`.
+
+Tambien se puede usar una ruta directa permitida por la configuracion:
+
+```text
+/servermessage/motd.html?src=/servermessage/img/motd/patas04.png
+```
+
 Las imagenes usadas por esas paginas se guardan en:
 
 ```text
