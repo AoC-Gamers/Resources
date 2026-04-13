@@ -470,87 +470,72 @@
     "status": 200
   },
   {
-    "route": "/servermessage/img/logo/logo.patas.png",
+    "route": "/servermessage/img/logo/patas.png",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/servermessage/img/logo/logo.patas2.png",
+    "route": "/servermessage/img/logo/patas2.png",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/servermessage/img/logo/logo.patas3.png",
+    "route": "/servermessage/img/logo/patas3.png",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/servermessage/img/logo/logo.vania.jpg",
+    "route": "/servermessage/img/logo/vania.jpg",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/servermessage/img/logo/logo.zykklo.jpg",
+    "route": "/servermessage/img/logo/zykklo.jpg",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/servermessage/img/motd/motd.classic01.png",
+    "route": "/servermessage/img/motd/classic01.png",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/servermessage/img/motd/motd.classic02.png",
+    "route": "/servermessage/img/motd/classic02.png",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/servermessage/img/motd/motd.gpt01.png",
+    "route": "/servermessage/img/motd/gpt01.png",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/servermessage/img/motd/motd.patas01.jpg",
+    "route": "/servermessage/img/motd/patas01.jpg",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/servermessage/img/motd/motd.patas02.jpg",
+    "route": "/servermessage/img/motd/patas02.jpg",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/servermessage/img/motd/motd.patas03.png",
+    "route": "/servermessage/img/motd/patas03.png",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/servermessage/img/motd/motd.patas04.png",
+    "route": "/servermessage/img/motd/patas04.png",
     "target": "/index.html",
     "status": 200
   },
   {
-    "route": "/servermessage/img/motd/motd.patasvip01.jpg",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
-    "route": "/servermessage/motd_vip.patas.html",
+    "route": "/servermessage/img/motd/patasvip01.jpg",
     "target": "/index.html",
     "status": 200
   },
   {
     "route": "/servermessage/motd.html",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
-    "route": "/servermessage/motd.patas.html",
-    "target": "/index.html",
-    "status": 200
-  },
-  {
-    "route": "/servermessage/motd.patas2.html",
     "target": "/index.html",
     "status": 200
   },

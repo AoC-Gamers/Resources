@@ -2,7 +2,7 @@
   "name": "aoc-gamers-resources",
   "version": "1.0.0",
   "description": "Build estatico para recursos de AoC Gamers.",
-  "main": "scripts/build.js",
+  "main": "src/build/build.js",
   "engines": {
     "node": ">=22"
   },

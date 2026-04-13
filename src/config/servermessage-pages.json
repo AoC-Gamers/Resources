@@ -1,0 +1,25 @@
+[
+  {
+    "file": "host.html",
+    "title": "HOST",
+    "src": "/servermessage/img/host/host.png",
+    "images": {
+      "host": "/servermessage/img/host/host.png"
+    }
+  },
+  {
+    "file": "motd.html",
+    "title": "MOTD",
+    "src": "/servermessage/img/motd/classic01.png",
+    "images": {
+      "classic01": "/servermessage/img/motd/classic01.png",
+      "classic02": "/servermessage/img/motd/classic02.png",
+      "gpt01": "/servermessage/img/motd/gpt01.png",
+      "patas01": "/servermessage/img/motd/patas01.jpg",
+      "patas02": "/servermessage/img/motd/patas02.jpg",
+      "patas03": "/servermessage/img/motd/patas03.png",
+      "patas04": "/servermessage/img/motd/patas04.png",
+      "patasvip01": "/servermessage/img/motd/patasvip01.jpg"
+    }
+  }
+]

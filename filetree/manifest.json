@@ -356,8 +356,8 @@
     "sha256": "590d939e897b630723ec44ea750ff09fb1590d59c965d3bc2efdaa09acd0aba0"
   },
   "servermessage/host.html": {
-    "size": 292,
-    "sha256": "e788ef9684dffd1c57544473ce0c7395931593949792a0bf08dc736aa0a861c1"
+    "size": 1012,
+    "sha256": "94146e32f4730ad89030d9066c4b26c938c76ec20da7f1c5f8fee7506e88723a"
   },
   "servermessage/img/custom/motd-fondo.png": {
     "size": 1941801,
@@ -375,73 +375,61 @@
     "size": 22172,
     "sha256": "fa5d8333aaf9b708dcaad2aea8bad626a03dc966e26fea24faee78e9cf8ee9a1"
   },
-  "servermessage/img/logo/logo.patas.png": {
+  "servermessage/img/logo/patas.png": {
     "size": 33208,
     "sha256": "711d836dba468e5bd73accfbbd275c2cee2260a73058b32dca820d2028edc65f"
   },
-  "servermessage/img/logo/logo.patas2.png": {
+  "servermessage/img/logo/patas2.png": {
     "size": 53996,
     "sha256": "6b6fb584f31aa42c3e12fae45d2b2da39192c9563b1e867750790b3cfc8f6767"
   },
-  "servermessage/img/logo/logo.patas3.png": {
+  "servermessage/img/logo/patas3.png": {
     "size": 23724,
     "sha256": "d527f57a0cb636fadbc8a4954dfd1fd8043c55d657c02ab5082565b198df49b4"
   },
-  "servermessage/img/logo/logo.vania.jpg": {
+  "servermessage/img/logo/vania.jpg": {
     "size": 124423,
     "sha256": "b4a6e20ed9b9023f4ab90b1593c4188864fe91c90e48de19780dbb7973889a03"
   },
-  "servermessage/img/logo/logo.zykklo.jpg": {
+  "servermessage/img/logo/zykklo.jpg": {
     "size": 938803,
     "sha256": "310abe0309970efe280780d2ad78e4732b31069e91e09519ef32e432f790e1d9"
   },
-  "servermessage/img/motd/motd.classic01.png": {
+  "servermessage/img/motd/classic01.png": {
     "size": 580281,
     "sha256": "25f5634164741ef02745bde112f024819f5f44fe541518eeb9a45f34d56e8877"
   },
-  "servermessage/img/motd/motd.classic02.png": {
+  "servermessage/img/motd/classic02.png": {
     "size": 1866175,
     "sha256": "326ff41eb2d9d7c0b8c3d9c917434b1df904ecd73bfd699893e0e5cf81a98f14"
   },
-  "servermessage/img/motd/motd.gpt01.png": {
+  "servermessage/img/motd/gpt01.png": {
     "size": 4721824,
     "sha256": "f1b7bb3615de0e18581e19e04f91700c0d76328d5225cd26793f7869b534095c"
   },
-  "servermessage/img/motd/motd.patas01.jpg": {
+  "servermessage/img/motd/patas01.jpg": {
     "size": 743798,
     "sha256": "53d5ab763a4d739b1c60d4142ea3086a0cbb1586aca9198c556c43b0c22cfa25"
   },
-  "servermessage/img/motd/motd.patas02.jpg": {
+  "servermessage/img/motd/patas02.jpg": {
     "size": 659074,
     "sha256": "79044f1728cd5d921588c76a49d2d4865da08c2c5bcc2932bf49cb62c9d440d3"
   },
-  "servermessage/img/motd/motd.patas03.png": {
+  "servermessage/img/motd/patas03.png": {
     "size": 4721876,
     "sha256": "2acde88b5dcab6d90180ce5bc4c0e8e0d924eeda17317236058898109f16b499"
   },
-  "servermessage/img/motd/motd.patas04.png": {
+  "servermessage/img/motd/patas04.png": {
     "size": 972264,
     "sha256": "3bc7a394cbe970413c864c03320d4699e21377e29547fbcb474361f4420fcf83"
   },
-  "servermessage/img/motd/motd.patasvip01.jpg": {
+  "servermessage/img/motd/patasvip01.jpg": {
     "size": 285262,
     "sha256": "c71632515e9428c011ff7efa5eb04a79c3cd6a023b05768dee92127d328275d3"
   },
-  "servermessage/motd_vip.patas.html": {
-    "size": 311,
-    "sha256": "2d59f2543599d839c8f7f8c2adf965aad431f1da7f46101d1547f4644e555ac7"
-  },
   "servermessage/motd.html": {
-    "size": 302,
-    "sha256": "08362eee7fff9c87219eb8a622673b6805dbe5aa73b31f0ab9a756af430e66a8"
-  },
-  "servermessage/motd.patas.html": {
-    "size": 300,
-    "sha256": "d08f012d802acb00f20bdc2ab094788183191a8e0d3d8ca078002d44dd32abe2"
-  },
-  "servermessage/motd.patas2.html": {
-    "size": 300,
-    "sha256": "b42ca4136f4c0380294862787f9e2d551703ae8507533685715045078f972446"
+    "size": 1430,
+    "sha256": "8f8ee2ca8efdb757760ac77c063e00c80afb111d6b5f28a66cd16e0a481ba525"
   },
   "tools/MapGenerator.py": {
     "size": 18225,

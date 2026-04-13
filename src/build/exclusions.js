@@ -29,6 +29,7 @@ const exclusions = new Set([
     'build.sh',
     'build.ps1',
     'scripts',
+    'src',
     'filetree',
 
     // Others
