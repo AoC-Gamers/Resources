@@ -32,74 +32,69 @@ function validateImagePath(src, pageFile) {
   }
 }
 
-function normalizePageImages(page) {
-  const images = { default: page.src, ...(page.images || {}) };
-
-  for (const [key, src] of Object.entries(images)) {
-    if (!key || !src) {
-      throw new Error(`Imagen invalida en ${page.file}.`);
-    }
-
-    validateImagePath(src, page.file);
-  }
-
-  return images;
+function renderServerMessageHtml(title, src) {
+  return `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>${escapeHtml(title)} AoC</title>
+  </head>
+  <body style="margin:0; padding:0; background:#000; overflow-y: hidden;">
+    <img alt="${escapeHtml(title)}" src="${escapeHtml(src)}" style="width:100%;height:100%;">
+  </body>
+</html>
+`;
 }
 
-function renderDynamicImageScript(images) {
-  const imageEntries = JSON.stringify(images, null, 6);
+function normalizePageGroup(group) {
+  if (!group.type || !group.title || !group.default || !group.images) {
+    throw new Error('Cada grupo servermessage debe definir type, title, default e images.');
+  }
 
-  return `    <script>
-      const allowedImages = ${imageEntries};
-      const params = new URLSearchParams(globalThis.location.search);
-      const requestedImage = params.get('img');
-      const requestedSource = params.get('src');
-      const image = document.getElementById('servermessage-image');
-      const allowedSources = new Set(Object.values(allowedImages));
-      let selectedSource = '';
+  const imageEntries = Object.entries(group.images);
+  if (imageEntries.length === 0) {
+    throw new Error(`El grupo ${group.type} no tiene imagenes configuradas.`);
+  }
 
-      if (requestedImage && allowedImages[requestedImage]) {
-        selectedSource = allowedImages[requestedImage];
-      } else if (requestedSource && allowedSources.has(requestedSource)) {
-        selectedSource = requestedSource;
-      }
+  if (!group.images[group.default]) {
+    throw new Error(`La imagen default '${group.default}' no existe en el grupo ${group.type}.`);
+  }
 
-      if (selectedSource) {
-        image.src = selectedSource;
-        image.hidden = false;
-      }
-    </script>
-`;
+  for (const [name, src] of imageEntries) {
+    if (!/^[a-z0-9-]+$/i.test(name)) {
+      throw new Error(`Nombre de imagen invalido en ${group.type}: ${name}`);
+    }
+
+    validateImagePath(src, `${group.type}.${name}.html`);
+  }
+
+  return { ...group, imageEntries };
 }
 
 function renderServerMessages() {
   const outputDir = path.join(rootDir, 'servermessage');
   ensureDir(outputDir);
 
-  for (const page of serverMessagePages) {
-    if (!page.file || !page.title || !page.src) {
-      throw new Error('Cada pagina servermessage debe definir file, title y src.');
+  for (const entry of fs.readdirSync(outputDir, { withFileTypes: true })) {
+    if (entry.isFile() && /^(host|motd)(?:\.[a-z0-9-]+)?\.html$/i.test(entry.name)) {
+      fs.unlinkSync(path.join(outputDir, entry.name));
     }
+  }
 
-    const images = normalizePageImages(page);
-    const dynamicImageScript = page.images ? renderDynamicImageScript(images) : '';
-    const imageSource = page.requireParam ? '' : ` src="${escapeHtml(page.src)}"`;
-    const imageHidden = page.requireParam ? ' hidden' : '';
+  for (const rawGroup of serverMessagePages) {
+    const group = normalizePageGroup(rawGroup);
 
-    const html = `<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>${escapeHtml(page.title)} AoC</title>
-  </head>
-  <body style="margin:0; padding:0; background:#000; overflow-y: hidden;">
-    <img id="servermessage-image" alt="${escapeHtml(page.title)}"${imageSource}${imageHidden} style="width:100%;height:100%;">
-${dynamicImageScript}
-  </body>
-</html>
-`;
+    fs.writeFileSync(
+      path.join(outputDir, `${group.type}.html`),
+      renderServerMessageHtml(group.title, group.images[group.default])
+    );
 
-    fs.writeFileSync(path.join(outputDir, page.file), html);
+    for (const [name, src] of group.imageEntries) {
+      fs.writeFileSync(
+        path.join(outputDir, `${group.type}.${name}.html`),
+        renderServerMessageHtml(group.title, src)
+      );
+    }
   }
 
   console.log('Paginas servermessage generadas correctamente.');

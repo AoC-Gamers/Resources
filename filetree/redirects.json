@@ -445,6 +445,11 @@
     "status": 200
   },
   {
+    "route": "/servermessage/host.host.html",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
     "route": "/servermessage/host.html",
     "target": "/index.html",
     "status": 200
@@ -535,7 +540,47 @@
     "status": 200
   },
   {
+    "route": "/servermessage/motd.classic01.html",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/servermessage/motd.classic02.html",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/servermessage/motd.gpt01.html",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
     "route": "/servermessage/motd.html",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/servermessage/motd.patas01.html",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/servermessage/motd.patas02.html",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/servermessage/motd.patas03.html",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/servermessage/motd.patas04.html",
+    "target": "/index.html",
+    "status": 200
+  },
+  {
+    "route": "/servermessage/motd.patasvip01.html",
     "target": "/index.html",
     "status": 200
   },

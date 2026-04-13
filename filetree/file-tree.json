@@ -106,6 +106,7 @@
     }
   },
   "servermessage": {
+    "host.host.html": null,
     "host.html": null,
     "img": {
       "custom": {
@@ -134,7 +135,15 @@
         "patasvip01.jpg": null
       }
     },
-    "motd.html": null
+    "motd.classic01.html": null,
+    "motd.classic02.html": null,
+    "motd.gpt01.html": null,
+    "motd.html": null,
+    "motd.patas01.html": null,
+    "motd.patas02.html": null,
+    "motd.patas03.html": null,
+    "motd.patas04.html": null,
+    "motd.patasvip01.html": null
   },
   "tools": {
     "MapGenerator.py": null

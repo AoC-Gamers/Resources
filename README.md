@@ -25,23 +25,23 @@ El build escribe los HTML finales en:
 servermessage/
 ```
 
-Las paginas pueden definir imagenes alternativas en `images`. Si una pagina tiene alternativas, se puede seleccionar una imagen por URL:
+Las paginas se generan por grupo y variante. Cada grupo conserva una pagina default:
 
 ```text
-/servermessage/motd.html?img=classic02
+/servermessage/motd.html
+/servermessage/host.html
 ```
+
+Y cada imagen configurada genera una pagina estatica con sintaxis `tipo.nombre.html`:
 
 ```text
-/servermessage/host.html?img=host
+/servermessage/motd.classic02.html
+/servermessage/motd.gpt01.html
+/servermessage/motd.patas04.html
+/servermessage/host.host.html
 ```
 
-`host.html` solo permite imagenes dentro de `/servermessage/img/host/`.
-
-Tambien se puede usar una ruta directa permitida por la configuracion:
-
-```text
-/servermessage/motd.html?src=/servermessage/img/motd/patas04.png
-```
+Este formato evita depender de JavaScript o query params dentro del navegador MOTD limitado de L4D2.
 
 Las imagenes usadas por esas paginas se guardan en:
 

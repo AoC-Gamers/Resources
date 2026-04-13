@@ -1,17 +1,16 @@
 [
   {
-    "file": "host.html",
+    "type": "host",
     "title": "HOST",
-    "src": "/servermessage/img/host/host.png",
+    "default": "host",
     "images": {
       "host": "/servermessage/img/host/host.png"
     }
   },
   {
-    "file": "motd.html",
+    "type": "motd",
     "title": "MOTD",
-    "src": "/servermessage/img/motd/classic01.png",
-    "requireParam": true,
+    "default": "classic01",
     "images": {
       "classic01": "/servermessage/img/motd/classic01.png",
       "classic02": "/servermessage/img/motd/classic02.png",

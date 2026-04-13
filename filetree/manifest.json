@@ -355,9 +355,13 @@
     "size": 35869428,
     "sha256": "590d939e897b630723ec44ea750ff09fb1590d59c965d3bc2efdaa09acd0aba0"
   },
+  "servermessage/host.host.html": {
+    "size": 292,
+    "sha256": "e788ef9684dffd1c57544473ce0c7395931593949792a0bf08dc736aa0a861c1"
+  },
   "servermessage/host.html": {
-    "size": 1160,
-    "sha256": "b4063ec26f0fad0c382714fc25b24f1d595ee67a5ff6af94c50cf3158f0cab36"
+    "size": 292,
+    "sha256": "e788ef9684dffd1c57544473ce0c7395931593949792a0bf08dc736aa0a861c1"
   },
   "servermessage/img/custom/motd-fondo.png": {
     "size": 1941801,
@@ -427,9 +431,41 @@
     "size": 285262,
     "sha256": "c71632515e9428c011ff7efa5eb04a79c3cd6a023b05768dee92127d328275d3"
   },
+  "servermessage/motd.classic01.html": {
+    "size": 297,
+    "sha256": "97b607ead655ebbf466593b858fd01aa3ed14334d69c2ad6c59628f0d244d135"
+  },
+  "servermessage/motd.classic02.html": {
+    "size": 297,
+    "sha256": "4627d7d70d8c0af49dab023f25b9d50ebc9dd0fd4134b8438686784bbd35fc7f"
+  },
+  "servermessage/motd.gpt01.html": {
+    "size": 293,
+    "sha256": "6130f3375671a0ae0cd9f601365574401673b23868bc5b6cbf8dc2d0cc753981"
+  },
   "servermessage/motd.html": {
-    "size": 1541,
-    "sha256": "ea54a0962ce8e468eee0257b0236ba805770258360bdf53e93de4e39dea0b1f4"
+    "size": 297,
+    "sha256": "97b607ead655ebbf466593b858fd01aa3ed14334d69c2ad6c59628f0d244d135"
+  },
+  "servermessage/motd.patas01.html": {
+    "size": 295,
+    "sha256": "6d6203f2b02cbbfb637b76c1fca2ab9d2ed69f36c1f93b861b928cd0a6d23ae1"
+  },
+  "servermessage/motd.patas02.html": {
+    "size": 295,
+    "sha256": "34596b3fea557a9ab00d8f4e46c34e40245c7950705a7f2228868cf9484d917d"
+  },
+  "servermessage/motd.patas03.html": {
+    "size": 295,
+    "sha256": "2d3b9793cadf825657967a86a41f036fb4c19ba151ced631e0c37a3ad16c021c"
+  },
+  "servermessage/motd.patas04.html": {
+    "size": 295,
+    "sha256": "950df6493e711fc8b270242bd20130f76719d4fc0847e5e9b7f59578a224ea1c"
+  },
+  "servermessage/motd.patasvip01.html": {
+    "size": 298,
+    "sha256": "14bbf324dd80dc91bf8b8058cd692ad9eaeb93d2ebacf040c6c750a24fa326ce"
   },
   "tools/MapGenerator.py": {
     "size": 18225,
