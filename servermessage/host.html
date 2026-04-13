@@ -11,16 +11,22 @@
       "default": "/servermessage/img/host/host.png",
       "host": "/servermessage/img/host/host.png"
 };
-      const params = new URLSearchParams(window.location.search);
+      const params = new URLSearchParams(globalThis.location.search);
       const requestedImage = params.get('img');
       const requestedSource = params.get('src');
       const image = document.getElementById('servermessage-image');
       const allowedSources = new Set(Object.values(allowedImages));
+      let selectedSource = '';
 
       if (requestedImage && allowedImages[requestedImage]) {
-        image.src = allowedImages[requestedImage];
+        selectedSource = allowedImages[requestedImage];
       } else if (requestedSource && allowedSources.has(requestedSource)) {
-        image.src = requestedSource;
+        selectedSource = requestedSource;
+      }
+
+      if (selectedSource) {
+        image.src = selectedSource;
+        image.hidden = false;
       }
     </script>
 

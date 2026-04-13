@@ -5,7 +5,7 @@
     <title>MOTD AoC</title>
   </head>
   <body style="margin:0; padding:0; background:#000; overflow-y: hidden;">
-    <img id="servermessage-image" alt="MOTD" src="/servermessage/img/motd/classic01.png" style="width:100%;height:100%;">
+    <img id="servermessage-image" alt="MOTD" hidden style="width:100%;height:100%;">
     <script>
       const allowedImages = {
       "default": "/servermessage/img/motd/classic01.png",
@@ -18,16 +18,22 @@
       "patas04": "/servermessage/img/motd/patas04.png",
       "patasvip01": "/servermessage/img/motd/patasvip01.jpg"
 };
-      const params = new URLSearchParams(window.location.search);
+      const params = new URLSearchParams(globalThis.location.search);
       const requestedImage = params.get('img');
       const requestedSource = params.get('src');
       const image = document.getElementById('servermessage-image');
       const allowedSources = new Set(Object.values(allowedImages));
+      let selectedSource = '';
 
       if (requestedImage && allowedImages[requestedImage]) {
-        image.src = allowedImages[requestedImage];
+        selectedSource = allowedImages[requestedImage];
       } else if (requestedSource && allowedSources.has(requestedSource)) {
-        image.src = requestedSource;
+        selectedSource = requestedSource;
+      }
+
+      if (selectedSource) {
+        image.src = selectedSource;
+        image.hidden = false;
       }
     </script>
 

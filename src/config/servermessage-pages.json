@@ -11,6 +11,7 @@
     "file": "motd.html",
     "title": "MOTD",
     "src": "/servermessage/img/motd/classic01.png",
+    "requireParam": true,
     "images": {
       "classic01": "/servermessage/img/motd/classic01.png",
       "classic02": "/servermessage/img/motd/classic02.png",

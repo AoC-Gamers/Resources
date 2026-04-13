@@ -356,8 +356,8 @@
     "sha256": "590d939e897b630723ec44ea750ff09fb1590d59c965d3bc2efdaa09acd0aba0"
   },
   "servermessage/host.html": {
-    "size": 1012,
-    "sha256": "94146e32f4730ad89030d9066c4b26c938c76ec20da7f1c5f8fee7506e88723a"
+    "size": 1160,
+    "sha256": "b4063ec26f0fad0c382714fc25b24f1d595ee67a5ff6af94c50cf3158f0cab36"
   },
   "servermessage/img/custom/motd-fondo.png": {
     "size": 1941801,
@@ -400,12 +400,12 @@
     "sha256": "25f5634164741ef02745bde112f024819f5f44fe541518eeb9a45f34d56e8877"
   },
   "servermessage/img/motd/classic02.png": {
-    "size": 1866175,
-    "sha256": "326ff41eb2d9d7c0b8c3d9c917434b1df904ecd73bfd699893e0e5cf81a98f14"
+    "size": 1367265,
+    "sha256": "46fb76487e4d156c516c86cbd221224ce1c82bfe0b9730c01752c7878394cb8a"
   },
   "servermessage/img/motd/gpt01.png": {
-    "size": 4721824,
-    "sha256": "f1b7bb3615de0e18581e19e04f91700c0d76328d5225cd26793f7869b534095c"
+    "size": 1530300,
+    "sha256": "3ae908cf1d010b5cc91fc0ff8193d10ecebb85a2cf6228f466a398ce0cf14c58"
   },
   "servermessage/img/motd/patas01.jpg": {
     "size": 743798,
@@ -416,20 +416,20 @@
     "sha256": "79044f1728cd5d921588c76a49d2d4865da08c2c5bcc2932bf49cb62c9d440d3"
   },
   "servermessage/img/motd/patas03.png": {
-    "size": 4721876,
-    "sha256": "2acde88b5dcab6d90180ce5bc4c0e8e0d924eeda17317236058898109f16b499"
+    "size": 3541880,
+    "sha256": "a500e0d8e9c7e6386f43ac3e4fa915ccb064d21c80452867029ada75d68ee167"
   },
   "servermessage/img/motd/patas04.png": {
-    "size": 972264,
-    "sha256": "3bc7a394cbe970413c864c03320d4699e21377e29547fbcb474361f4420fcf83"
+    "size": 804954,
+    "sha256": "425b487f45d4ce420da5fa87430aa9db0b20e9ad472cc43725e7a1ad2c30ffc0"
   },
   "servermessage/img/motd/patasvip01.jpg": {
     "size": 285262,
     "sha256": "c71632515e9428c011ff7efa5eb04a79c3cd6a023b05768dee92127d328275d3"
   },
   "servermessage/motd.html": {
-    "size": 1430,
-    "sha256": "8f8ee2ca8efdb757760ac77c063e00c80afb111d6b5f28a66cd16e0a481ba525"
+    "size": 1541,
+    "sha256": "ea54a0962ce8e468eee0257b0236ba805770258360bdf53e93de4e39dea0b1f4"
   },
   "tools/MapGenerator.py": {
     "size": 18225,

@@ -51,16 +51,22 @@ function renderDynamicImageScript(images) {
 
   return `    <script>
       const allowedImages = ${imageEntries};
-      const params = new URLSearchParams(window.location.search);
+      const params = new URLSearchParams(globalThis.location.search);
       const requestedImage = params.get('img');
       const requestedSource = params.get('src');
       const image = document.getElementById('servermessage-image');
       const allowedSources = new Set(Object.values(allowedImages));
+      let selectedSource = '';
 
       if (requestedImage && allowedImages[requestedImage]) {
-        image.src = allowedImages[requestedImage];
+        selectedSource = allowedImages[requestedImage];
       } else if (requestedSource && allowedSources.has(requestedSource)) {
-        image.src = requestedSource;
+        selectedSource = requestedSource;
+      }
+
+      if (selectedSource) {
+        image.src = selectedSource;
+        image.hidden = false;
       }
     </script>
 `;
@@ -77,6 +83,8 @@ function renderServerMessages() {
 
     const images = normalizePageImages(page);
     const dynamicImageScript = page.images ? renderDynamicImageScript(images) : '';
+    const imageSource = page.requireParam ? '' : ` src="${escapeHtml(page.src)}"`;
+    const imageHidden = page.requireParam ? ' hidden' : '';
 
     const html = `<!DOCTYPE html>
 <html lang="en">
@@ -85,7 +93,7 @@ function renderServerMessages() {
     <title>${escapeHtml(page.title)} AoC</title>
   </head>
   <body style="margin:0; padding:0; background:#000; overflow-y: hidden;">
-    <img id="servermessage-image" alt="${escapeHtml(page.title)}" src="${escapeHtml(page.src)}" style="width:100%;height:100%;">
+    <img id="servermessage-image" alt="${escapeHtml(page.title)}"${imageSource}${imageHidden} style="width:100%;height:100%;">
 ${dynamicImageScript}
   </body>
 </html>
