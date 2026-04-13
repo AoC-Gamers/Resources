@@ -43,6 +43,14 @@ Y cada imagen configurada genera una pagina estatica con sintaxis `tipo.nombre.h
 
 Este formato evita depender de JavaScript o query params dentro del navegador MOTD limitado de L4D2.
 
+Para imagenes MOTD de L4D2, usa este tamano:
+
+```text
+width: 1536
+height: 768
+aspect ratio: 2:1
+```
+
 Las imagenes usadas por esas paginas se guardan en:
 
 ```text
